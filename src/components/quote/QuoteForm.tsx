@@ -89,11 +89,11 @@ export default function QuoteForm({
   if (submitted) {
     return (
       <div className={cn("p-8 text-center", className)}>
-        <div className="w-16 h-16 bg-[#FF5722]/10 border border-[#FF5722] rounded-none flex items-center justify-center mx-auto mb-6 text-[#FF5722]">
+        <div className="w-16 h-16 bg-[#3b5fc2]/10 border border-[#3b5fc2] rounded-none flex items-center justify-center mx-auto mb-6 text-[#3b5fc2]">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-3">Quote Request Received</h3>
-        <p className="text-[#85898C] max-w-md mx-auto mb-6 text-sm leading-relaxed">
+        <h3 className="text-2xl font-bold text-[#050505] mb-3">Quote Request Received</h3>
+        <p className="text-[#373737] max-w-md mx-auto mb-6 text-sm leading-relaxed">
           Thank you. Our Ontario dispatch and operations team has received your freight details and will review and respond promptly.
         </p>
         <button
@@ -118,7 +118,7 @@ export default function QuoteForm({
               message: "",
             });
           }}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#1B1F23] hover:bg-[#22272B] text-white text-xs font-mono uppercase tracking-wider border border-white/10 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#EDEDED] hover:bg-[#DDDEDF] text-[#050505] text-xs font-mono uppercase tracking-wider border border-[#DDDEDF] transition-colors"
         >
           Submit Another Request
         </button>
@@ -129,7 +129,7 @@ export default function QuoteForm({
   return (
     <div className={cn("w-full", className)}>
       {/* Step Indicators */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+      <div className="flex items-center justify-between border-b border-[#DDDEDF] pb-4 mb-6">
         {[
           { num: 1, label: "Service" },
           { num: 2, label: "Routing" },
@@ -141,10 +141,10 @@ export default function QuoteForm({
               className={cn(
                 "w-6 h-6 rounded-none flex items-center justify-center text-xs font-mono transition-colors",
                 step === s.num
-                  ? "bg-[#FF5722] text-white font-bold"
+                  ? "bg-[#3b5fc2] text-white font-bold"
                   : step > s.num
-                  ? "bg-[#1F2428] text-[#FF5722] border border-[#FF5722]/40"
-                  : "bg-[#14171A] text-[#85898C] border border-white/10"
+                  ? "bg-[#EDEDED] text-[#3b5fc2] border border-[#3b5fc2]/40"
+                  : "bg-[#F7F7F7] text-[#373737] border border-[#DDDEDF]"
               )}
             >
               {s.num}
@@ -152,7 +152,7 @@ export default function QuoteForm({
             <span
               className={cn(
                 "text-xs font-mono uppercase tracking-wider hidden sm:inline",
-                step === s.num ? "text-white" : "text-[#85898C]"
+                step === s.num ? "text-[#050505]" : "text-[#373737]"
               )}
             >
               {s.label}
@@ -165,10 +165,10 @@ export default function QuoteForm({
       {step === 1 && (
         <div>
           <div className="mb-4">
-            <span className="text-[11px] font-mono text-[#FF5722] uppercase tracking-widest block mb-1">
+            <span className="text-[11px] font-mono text-[#3b5fc2] uppercase tracking-widest block mb-1">
               Step 01 / 04
             </span>
-            <h4 className="text-lg font-bold text-white uppercase tracking-wide">
+            <h4 className="text-lg font-bold text-[#050505] uppercase tracking-wide">
               What service do you need?
             </h4>
           </div>
@@ -184,22 +184,22 @@ export default function QuoteForm({
                   className={cn(
                     "p-4 text-left border flex items-center gap-3.5 transition-all",
                     isSelected
-                      ? "border-[#FF5722] bg-[#FF5722]/10 text-white"
-                      : "border-white/10 bg-[#14171A] text-[#85898C] hover:border-white/20 hover:text-white"
+                      ? "border-[#3b5fc2] bg-[#3b5fc2]/10 text-[#050505]"
+                      : "border-[#DDDEDF] bg-[#F7F7F7] text-[#373737] hover:border-[#DDDEDF] hover:text-[#050505]"
                   )}
                 >
                   <div
                     className={cn(
                       "p-2 border",
                       isSelected
-                        ? "border-[#FF5722] bg-[#FF5722] text-white"
-                        : "border-white/10 bg-[#1B1F23] text-[#85898C]"
+                        ? "border-[#3b5fc2] bg-[#3b5fc2] text-white"
+                        : "border-[#DDDEDF] bg-[#EDEDED] text-[#373737]"
                     )}
                   >
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">
+                    <div className="text-sm font-medium text-[#050505]">
                       {item.label}
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={() => setStep(2)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5722] hover:bg-[#E64A19] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors"
             >
               Next: Routing <ArrowRight className="w-3.5 h-3.5" />
             </button>
@@ -223,21 +223,21 @@ export default function QuoteForm({
       {step === 2 && (
         <form onSubmit={handleNext}>
           <div className="mb-4">
-            <span className="text-[11px] font-mono text-[#FF5722] uppercase tracking-widest block mb-1">
+            <span className="text-[11px] font-mono text-[#3b5fc2] uppercase tracking-widest block mb-1">
               Step 02 / 04
             </span>
-            <h4 className="text-lg font-bold text-white uppercase tracking-wide">
+            <h4 className="text-lg font-bold text-[#050505] uppercase tracking-wide">
               Origin & Destination
             </h4>
-            <p className="text-xs text-[#85898C] mt-1 font-mono">
+            <p className="text-xs text-[#373737] mt-1 font-mono">
               Primary Service Area: Ontario & Greater Toronto Area (GTA)
             </p>
           </div>
 
           <div className="space-y-4 mb-6">
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5 flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-[#FF5722]" /> Pickup Location (City / Postal Code)
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-[#3b5fc2]" /> Pickup Location (City / Postal Code)
               </label>
               <input
                 type="text"
@@ -247,13 +247,13 @@ export default function QuoteForm({
                   setFormData({ ...formData, origin: e.target.value })
                 }
                 placeholder="e.g. Mississauga, ON (L5T 1B3)"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5 flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-[#FF5722]" /> Delivery Location (City / Postal Code)
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-[#3b5fc2]" /> Delivery Location (City / Postal Code)
               </label>
               <input
                 type="text"
@@ -263,7 +263,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, destination: e.target.value })
                 }
                 placeholder="e.g. Vaughan, ON (L4K 4M5)"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
           </div>
@@ -272,13 +272,13 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={handleBack}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 bg-[#14171A] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1B1F23] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back
             </button>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5722] hover:bg-[#E64A19] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors"
             >
               Next: Freight Details <ArrowRight className="w-3.5 h-3.5" />
             </button>
@@ -290,17 +290,17 @@ export default function QuoteForm({
       {step === 3 && (
         <form onSubmit={handleNext}>
           <div className="mb-4">
-            <span className="text-[11px] font-mono text-[#FF5722] uppercase tracking-widest block mb-1">
+            <span className="text-[11px] font-mono text-[#3b5fc2] uppercase tracking-widest block mb-1">
               Step 03 / 04
             </span>
-            <h4 className="text-lg font-bold text-white uppercase tracking-wide">
+            <h4 className="text-lg font-bold text-[#050505] uppercase tracking-wide">
               Freight Specifications
             </h4>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
                 Estimated Weight (lbs)
               </label>
               <input
@@ -310,11 +310,11 @@ export default function QuoteForm({
                   setFormData({ ...formData, weight: e.target.value })
                 }
                 placeholder="e.g. 15,000 lbs"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
                 Pallet Count / Skids
               </label>
               <input
@@ -324,13 +324,13 @@ export default function QuoteForm({
                   setFormData({ ...formData, palletCount: e.target.value })
                 }
                 placeholder="e.g. 12 Skids"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
           </div>
 
           <div className="mb-4">
-            <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+            <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
               Freight Type / Commodity
             </label>
             <input
@@ -340,13 +340,13 @@ export default function QuoteForm({
                 setFormData({ ...formData, freightType: e.target.value })
               }
               placeholder="e.g. General freight, Electronics, Commercial goods"
-              className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
             />
           </div>
 
           {/* Checkbox Options */}
-          <div className="space-y-2.5 mb-6 border-t border-b border-white/10 py-3">
-            <label className="flex items-center gap-3 cursor-pointer text-xs text-white">
+          <div className="space-y-2.5 mb-6 border-t border-b border-[#DDDEDF] py-3">
+            <label className="flex items-center gap-3 cursor-pointer text-xs text-[#050505]">
               <input
                 type="checkbox"
                 checked={formData.tailgateRequired}
@@ -356,11 +356,11 @@ export default function QuoteForm({
                     tailgateRequired: e.target.checked,
                   })
                 }
-                className="w-4 h-4 accent-[#FF5722] rounded-none bg-[#14171A] border-white/20"
+                className="w-4 h-4 accent-[#3b5fc2] rounded-none bg-[#F7F7F7] border-[#DDDEDF]"
               />
               <span>Tailgate delivery required (ground level offload)</span>
             </label>
-            <label className="flex items-center gap-3 cursor-pointer text-xs text-white">
+            <label className="flex items-center gap-3 cursor-pointer text-xs text-[#050505]">
               <input
                 type="checkbox"
                 checked={formData.appointmentRequired}
@@ -370,11 +370,11 @@ export default function QuoteForm({
                     appointmentRequired: e.target.checked,
                   })
                 }
-                className="w-4 h-4 accent-[#FF5722] rounded-none bg-[#14171A] border-white/20"
+                className="w-4 h-4 accent-[#3b5fc2] rounded-none bg-[#F7F7F7] border-[#DDDEDF]"
               />
               <span>Strict appointment or dock time required</span>
             </label>
-            <label className="flex items-center gap-3 cursor-pointer text-xs text-white">
+            <label className="flex items-center gap-3 cursor-pointer text-xs text-[#050505]">
               <input
                 type="checkbox"
                 checked={formData.highValueShipment}
@@ -384,7 +384,7 @@ export default function QuoteForm({
                     highValueShipment: e.target.checked,
                   })
                 }
-                className="w-4 h-4 accent-[#FF5722] rounded-none bg-[#14171A] border-white/20"
+                className="w-4 h-4 accent-[#3b5fc2] rounded-none bg-[#F7F7F7] border-[#DDDEDF]"
               />
               <span>High-value or electronics cargo (security monitored)</span>
             </label>
@@ -394,13 +394,13 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={handleBack}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 bg-[#14171A] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1B1F23] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back
             </button>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5722] hover:bg-[#E64A19] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors"
             >
               Next: Contact Info <ArrowRight className="w-3.5 h-3.5" />
             </button>
@@ -412,17 +412,17 @@ export default function QuoteForm({
       {step === 4 && (
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <span className="text-[11px] font-mono text-[#FF5722] uppercase tracking-widest block mb-1">
+            <span className="text-[11px] font-mono text-[#3b5fc2] uppercase tracking-widest block mb-1">
               Step 04 / 04
             </span>
-            <h4 className="text-lg font-bold text-white uppercase tracking-wide">
+            <h4 className="text-lg font-bold text-[#050505] uppercase tracking-wide">
               Your Details
             </h4>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
                 Company Name *
               </label>
               <input
@@ -433,11 +433,11 @@ export default function QuoteForm({
                   setFormData({ ...formData, company: e.target.value })
                 }
                 placeholder="Business or 3PL Name"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
                 Contact Name *
               </label>
               <input
@@ -448,14 +448,14 @@ export default function QuoteForm({
                   setFormData({ ...formData, name: e.target.value })
                 }
                 placeholder="Your Full Name"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
                 Email Address *
               </label>
               <input
@@ -466,11 +466,11 @@ export default function QuoteForm({
                   setFormData({ ...formData, email: e.target.value })
                 }
                 placeholder="name@company.com"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
             <div>
-              <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+              <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
                 Phone Number *
               </label>
               <input
@@ -481,13 +481,13 @@ export default function QuoteForm({
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 placeholder="(416) 000-0000"
-                className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
               />
             </div>
           </div>
 
           <div className="mb-6">
-            <label className="block text-xs font-mono uppercase text-[#85898C] mb-1.5">
+            <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
               Additional Notes / Handling Instructions
             </label>
             <textarea
@@ -497,7 +497,7 @@ export default function QuoteForm({
                 setFormData({ ...formData, message: e.target.value })
               }
               placeholder="Any specific delivery instructions, timing requirements, or broker notes..."
-              className="w-full px-4 py-3 bg-[#14171A] border border-white/10 text-white placeholder-[#5C6266] text-sm focus:outline-none focus:border-[#FF5722] transition-colors resize-none"
+              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors resize-none"
             />
           </div>
 
@@ -505,14 +505,14 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={handleBack}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 bg-[#14171A] text-white text-xs font-mono uppercase tracking-wider hover:bg-[#1B1F23] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center gap-2 px-7 py-3 bg-[#FF5722] hover:bg-[#E64A19] text-white text-xs font-mono uppercase tracking-wider transition-colors disabled:opacity-50"
+              className="inline-flex items-center gap-2 px-7 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors disabled:opacity-50"
             >
               {loading ? "Transmitting..." : "Submit Quote Request"}
               <ArrowRight className="w-3.5 h-3.5" />

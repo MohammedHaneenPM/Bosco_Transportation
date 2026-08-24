@@ -82,20 +82,20 @@ export default function HighValue() {
   return (
     <section
       ref={containerRef}
-      className="py-24 bg-[#080A0C] border-b border-white/10 relative overflow-hidden"
+      className="py-24 bg-[#F6F7F8] border-b border-[#DDDEDF] relative overflow-hidden"
     >
       {/* Background radial accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF5722]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b5fc2]/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 high-value-reveal">
           <SectionLabel>HIGH-VALUE & ELECTRONICS TRANSPORTATION</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-grotesk tracking-tight leading-[1.1] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-4">
             SECURITY. VISIBILITY. <br />
-            <span className="text-[#FF5722]">CONTROL.</span>
+            <span className="text-[#3b5fc2]">CONTROL.</span>
           </h2>
-          <p className="text-sm sm:text-base text-[#85898C] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#373737] leading-relaxed">
             Bosco Transport Inc. has experience handling electronics, high-value cargo and security-sensitive shipments where additional care, visibility and shipment control are required.
           </p>
         </div>
@@ -109,12 +109,12 @@ export default function HighValue() {
               return (
                 <div
                   key={index}
-                  className="flex items-center gap-3.5 p-3.5 bg-[#14171A] border border-white/10 hover:border-[#FF5722]/40 transition-colors"
+                  className="flex items-center gap-3.5 p-3.5 bg-[#F7F7F7] border border-[#DDDEDF] hover:border-[#3b5fc2]/40 transition-colors"
                 >
-                  <div className="p-2 bg-[#1B1F23] border border-white/10 text-[#FF5722] shrink-0">
+                  <div className="p-2 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] shrink-0">
                     <Icon className="w-4 h-4" />
                   </div>
-                  <span className="text-xs font-mono text-white/90 uppercase tracking-wide">
+                  <span className="text-xs font-mono text-[#050505] uppercase tracking-wide">
                     {cap.text}
                   </span>
                 </div>
@@ -123,19 +123,19 @@ export default function HighValue() {
           </div>
 
           {/* Right Column: Signature Transit Route Illustration */}
-          <div className="lg:col-span-5 bg-[#14171A] border border-white/15 p-8 relative high-value-reveal">
-            <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#FF5722] tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-[#FF5722] animate-ping" />
+          <div className="lg:col-span-5 bg-[#F7F7F7] border border-[#DDDEDF] p-8 relative high-value-reveal">
+            <div className="flex items-center justify-between mb-6 border-b border-[#DDDEDF] pb-4">
+              <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#3b5fc2] tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-[#3b5fc2] animate-ping" />
                 <span>Live Shipment Oversight</span>
               </div>
-              <span className="text-[10px] font-mono text-[#85898C] uppercase">
+              <span className="text-[10px] font-mono text-[#373737] uppercase">
                 Ontario Transit Route
               </span>
             </div>
 
             {/* Route Map Graphic */}
-            <div className="relative py-8 px-4 bg-[#0B0D0F] border border-white/5 flex flex-col justify-center items-center">
+            <div className="relative py-8 px-4 bg-[#FEFEFE] border border-[#DDDEDF] flex flex-col justify-center items-center">
               <div className="w-full max-w-[340px] relative">
                 {/* SVG Route Line */}
                 <svg
@@ -147,31 +147,31 @@ export default function HighValue() {
                   {/* Background Track Line */}
                   <path
                     d="M 30 90 Q 120 20 180 60 T 310 30"
-                    stroke="rgba(255, 255, 255, 0.15)"
+                    stroke="rgba(0, 0, 0, 0.15)"
                     strokeWidth="3"
                     strokeDasharray="4 4"
                   />
 
-                  {/* Active Orange Glowing Track */}
+                  {/* Active Blue Glowing Track */}
                   <path
                     ref={pathRef}
                     d="M 30 90 Q 120 20 180 60 T 310 30"
-                    stroke="#FF5722"
+                    stroke="#3b5fc2"
                     strokeWidth="3"
                     strokeDasharray="6 6"
                   />
 
                   {/* Pickup Node (Origin) */}
                   <g transform="translate(30, 90)">
-                    <circle r="12" fill="#FF5722" fillOpacity="0.2" className="animate-ping" />
-                    <circle r="6" fill="#FF5722" />
+                    <circle r="12" fill="#3b5fc2" fillOpacity="0.2" className="animate-ping" />
+                    <circle r="6" fill="#3b5fc2" />
                     <circle r="3" fill="#FFFFFF" />
                   </g>
 
                   {/* Delivery Node (Destination) */}
                   <g transform="translate(310, 30)">
-                    <circle r="12" fill="#FF5722" fillOpacity="0.2" className="animate-ping" />
-                    <circle r="6" fill="#FF5722" />
+                    <circle r="12" fill="#3b5fc2" fillOpacity="0.2" className="animate-ping" />
+                    <circle r="6" fill="#3b5fc2" />
                     <circle r="3" fill="#FFFFFF" />
                   </g>
 
@@ -182,7 +182,7 @@ export default function HighValue() {
                       y="-10"
                       width="28"
                       height="20"
-                      fill="#FF5722"
+                      fill="#3b5fc2"
                       rx="2"
                     />
                     <circle cx="-6" cy="11" r="3" fill="#FFFFFF" />
@@ -202,16 +202,16 @@ export default function HighValue() {
                 </svg>
 
                 {/* Node Labels */}
-                <div className="flex justify-between items-center mt-4 pt-2 border-t border-white/10 text-xs font-mono">
-                  <div className="flex items-center gap-1.5 text-white">
-                    <MapPin className="w-3.5 h-3.5 text-[#FF5722]" />
+                <div className="flex justify-between items-center mt-4 pt-2 border-t border-[#DDDEDF] text-xs font-mono">
+                  <div className="flex items-center gap-1.5 text-[#050505]">
+                    <MapPin className="w-3.5 h-3.5 text-[#3b5fc2]" />
                     <span className="font-bold">PICKUP</span>
                   </div>
-                  <div className="text-[10px] text-[#85898C] uppercase tracking-wider">
+                  <div className="text-[10px] text-[#373737] uppercase tracking-wider">
                     Continuous Telematics
                   </div>
-                  <div className="flex items-center gap-1.5 text-white">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#FF5722]" />
+                  <div className="flex items-center gap-1.5 text-[#050505]">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#3b5fc2]" />
                     <span className="font-bold">DELIVERY</span>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ export default function HighValue() {
             </div>
 
             {/* Note on Operational Experience */}
-            <p className="text-xs text-[#85898C] leading-relaxed mt-4 font-mono">
+            <p className="text-xs text-[#373737] leading-relaxed mt-4 font-mono">
               Experience supporting electronics freight operations with strict seal compliance and verified proof-of-delivery protocols.
             </p>
           </div>

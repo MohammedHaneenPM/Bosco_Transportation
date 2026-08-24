@@ -89,17 +89,17 @@ export default function Safety() {
   return (
     <section
       ref={containerRef}
-      className="py-24 bg-[#0B0D0F] border-b border-white/10 relative overflow-hidden"
+      className="py-24 bg-[#F6F7F8] border-b border-[#DDDEDF] relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <SectionLabel>SAFETY & COMPLIANCE</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-grotesk tracking-tight leading-[1.1] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-4">
             SAFETY IS PART OF <br />
-            <span className="text-[#FF5722]">EVERY LOAD.</span>
+            <span className="text-[#3b5fc2]">EVERY LOAD.</span>
           </h2>
-          <p className="text-sm sm:text-base text-[#85898C] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#373737] leading-relaxed">
             At Bosco Transport, safety and regulatory compliance are integral to every shipment. We uphold strict maintenance, inspection, and cargo protection procedures across all operations.
           </p>
         </div>
@@ -114,23 +114,23 @@ export default function Safety() {
                 ref={(el) => {
                   itemsRef.current[index] = el;
                 }}
-                className="bg-[#14171A] border border-white/10 p-6 flex flex-col justify-between hover:border-[#FF5722]/50 transition-colors group"
+                className="bg-[#F7F7F7] border border-[#DDDEDF] p-6 flex flex-col justify-between hover:border-[#3b5fc2]/50 transition-colors group"
               >
                 <div>
-                  <div className="w-10 h-10 bg-[#1B1F23] border border-white/10 text-[#FF5722] flex items-center justify-center mb-5 group-hover:bg-[#FF5722] group-hover:text-white transition-colors">
+                  <div className="w-10 h-10 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-5 group-hover:bg-[#3b5fc2] group-hover:text-white transition-colors">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-white font-grotesk uppercase tracking-wide mb-2">
+                  <h3 className="text-sm font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-[#85898C] leading-relaxed">
+                  <p className="text-xs text-[#373737] leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-[#5C6266]">
+                <div className="pt-4 mt-6 border-t border-[#DDDEDF] flex items-center justify-between text-[10px] font-mono text-[#6A6A6A]">
                   <span>STANDARD #0{index + 1}</span>
-                  <span className="text-[#FF5722]">ACTIVE</span>
+                  <span className="text-[#3b5fc2]">ACTIVE</span>
                 </div>
               </div>
             );

@@ -64,27 +64,27 @@ export default function WhatWeDo() {
   return (
     <section
       ref={containerRef}
-      className="py-24 bg-[#0B0D0F] relative border-b border-white/10"
+      className="py-24 bg-[#F6F7F8] relative border-b border-[#DDDEDF]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column */}
           <div ref={leftColRef} className="lg:col-span-5 lg:sticky lg:top-32">
             <SectionLabel>WHAT WE DO</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-grotesk tracking-tight leading-[1.12] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.12] mb-6">
               TRANSPORTATION <br />
               SOLUTIONS THAT FIT <br />
               YOUR BUSINESS.
             </h2>
-            <p className="text-sm sm:text-base text-[#85898C] leading-relaxed mb-8 max-w-md">
+            <p className="text-sm sm:text-base text-[#373737] leading-relaxed mb-8 max-w-md">
               From full truckload to specialized freight, we provide safe, on-time and cost-effective transportation tailored to your unique needs across Ontario.
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#14171A] hover:bg-[#1B1F23] text-white border border-white/15 hover:border-[#FF5722] text-xs font-mono uppercase tracking-wider transition-all duration-200 group"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] hover:border-[#3b5fc2] text-xs font-mono uppercase tracking-wider transition-all duration-200 group"
             >
               <span>VIEW ALL SERVICES</span>
-              <ArrowRight className="w-4 h-4 text-[#FF5722] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 text-[#3b5fc2] transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
@@ -98,26 +98,26 @@ export default function WhatWeDo() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#14171A] border border-white/10 p-6 flex flex-col justify-between group hover:border-[#FF5722]/60 hover:bg-[#171B20] transition-all duration-300 relative"
+                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-6 flex flex-col justify-between group hover:border-[#3b5fc2]/60 hover:bg-[#FEFEFE] transition-all duration-300 relative"
                 >
                   <div>
                     {/* Top Row: Number & Icon */}
                     <div className="flex items-center justify-between mb-5">
-                      <span className="text-xs font-mono text-[#85898C] group-hover:text-white transition-colors">
+                      <span className="text-xs font-mono text-[#373737] group-hover:text-[#050505] transition-colors">
                         {service.number}
                       </span>
-                      <div className="text-[#FF5722] group-hover:scale-110 transition-transform">
+                      <div className="text-[#3b5fc2] group-hover:scale-110 transition-transform">
                         <Icon className="w-6 h-6" />
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-base font-bold text-white font-grotesk uppercase tracking-wide mb-2 group-hover:text-[#FF5722] transition-colors">
+                    <h3 className="text-base font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2 group-hover:text-[#3b5fc2] transition-colors">
                       {service.title}
                     </h3>
 
                     {/* Short Description */}
-                    <p className="text-xs text-[#85898C] leading-relaxed mb-6">
+                    <p className="text-xs text-[#373737] leading-relaxed mb-6">
                       {service.shortDesc}
                     </p>
                   </div>
@@ -125,7 +125,7 @@ export default function WhatWeDo() {
                   {/* Arrow Link */}
                   <Link
                     href={`/services#${service.id}`}
-                    className="inline-flex items-center text-xs font-mono text-[#85898C] group-hover:text-[#FF5722] transition-colors gap-1 pt-2 border-t border-white/5"
+                    className="inline-flex items-center text-xs font-mono text-[#373737] group-hover:text-[#3b5fc2] transition-colors gap-1 pt-2 border-t border-[#DDDEDF]"
                   >
                     <span>Details</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

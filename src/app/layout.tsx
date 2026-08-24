@@ -4,11 +4,12 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import QuoteModal from "@/components/quote/QuoteModal";
 import LenisProvider from "@/components/ui/LenisProvider";
+import CustomCursor from "@/components/ui/CustomCursor";
 import { getLogisticsStructuredData } from "@/lib/seo";
 
 export const viewport: Viewport = {
-  themeColor: "#0B0D0F",
-  colorScheme: "dark",
+  themeColor: "#F6F7F8",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
@@ -64,7 +65,7 @@ export default function RootLayout({
   const structuredData = getLogisticsStructuredData();
 
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -74,7 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="min-h-screen bg-[#0B0D0F] text-white flex flex-col antialiased selection:bg-[#FF5722] selection:text-white"
+        className="min-h-screen bg-[#F6F7F8] text-[#050505] flex flex-col antialiased selection:bg-[#3b5fc2] selection:text-white"
         suppressHydrationWarning
       >
         <LenisProvider>
@@ -82,6 +83,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <QuoteModal />
+          <CustomCursor />
         </LenisProvider>
       </body>
     </html>

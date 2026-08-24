@@ -63,10 +63,10 @@ export default function Metrics() {
   return (
     <div
       ref={containerRef}
-      className="relative z-30 bg-[#0B0D0F] border-t border-b border-white/10"
+      className="relative z-30 bg-[#F6F7F8] border-t border-b border-[#DDDEDF]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#DDDEDF]">
           {metrics.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -75,16 +75,16 @@ export default function Metrics() {
                 ref={(el) => {
                   cardsRef.current[index] = el;
                 }}
-                className="py-8 px-6 flex items-center gap-5 hover:bg-white/[0.02] transition-colors"
+                className="py-8 px-6 flex items-center gap-5 hover:bg-black/[0.02] transition-colors"
               >
-                <div className="p-3 bg-[#14171A] border border-white/10 text-[#FF5722] shrink-0">
+                <div className="p-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#3b5fc2] shrink-0">
                   <Icon className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white font-grotesk tracking-tight">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#050505] font-grotesk tracking-tight">
                     {item.value}
                   </div>
-                  <div className="text-[11px] font-mono tracking-widest text-[#85898C] uppercase font-semibold mt-0.5">
+                  <div className="text-[11px] font-mono tracking-widest text-[#373737] uppercase font-semibold mt-0.5">
                     {item.label}
                   </div>
                 </div>

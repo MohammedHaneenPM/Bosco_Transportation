@@ -30,7 +30,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0B0D0F]/90 backdrop-blur-md border-b border-white/10 py-3.5 shadow-lg"
+          ? "bg-[#F6F7F8]/90 backdrop-blur-md border-b border-[#DDDEDF] py-3.5 shadow-sm"
           : "bg-transparent py-5"
       }`}
     >
@@ -38,11 +38,11 @@ export default function Header() {
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl font-extrabold tracking-tighter text-white font-grotesk group-hover:text-[#FF5722] transition-colors flex items-center gap-1">
+            <span className="text-xl sm:text-2xl font-extrabold tracking-tighter text-[#050505] font-grotesk group-hover:text-[#3b5fc2] transition-colors flex items-center gap-1">
               BOSCO
-              <span className="w-2 h-2 bg-[#FF5722] inline-block mb-0.5"></span>
+              <span className="w-2 h-2 bg-[#3b5fc2] inline-block mb-0.5"></span>
             </span>
-            <span className="text-[9px] font-mono tracking-[0.25em] text-[#85898C] uppercase -mt-1">
+            <span className="text-[9px] font-mono tracking-[0.25em] text-[#373737] uppercase -mt-1">
               TRANSPORT INC.
             </span>
           </div>
@@ -64,13 +64,13 @@ export default function Header() {
                 href={link.href}
                 className={`text-xs font-mono tracking-widest uppercase transition-colors relative py-1 ${
                   isActive
-                    ? "text-[#FF5722] font-bold"
-                    : "text-[#85898C] hover:text-white"
+                    ? "text-[#3b5fc2] font-bold"
+                    : "text-[#6A6A6A] hover:text-[#050505]"
                 }`}
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF5722]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#3b5fc2]" />
                 )}
               </Link>
             );
@@ -81,7 +81,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4">
           <button
             onClick={openQuoteModal}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent hover:bg-[#FF5722] text-white border border-white/20 hover:border-[#FF5722] text-xs font-mono uppercase tracking-wider transition-all duration-200 group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent hover:bg-[#3b5fc2] text-[#050505] hover:text-white border border-[#DDDEDF] hover:border-[#3b5fc2] text-xs font-mono uppercase tracking-wider transition-all duration-200 group"
           >
             <span>REQUEST A QUOTE</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -91,7 +91,7 @@ export default function Header() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-white hover:text-[#FF5722] border border-white/10"
+          className="md:hidden p-2 text-[#050505] hover:text-[#3b5fc2] border border-[#DDDEDF]"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? (
@@ -104,14 +104,14 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0B0D0F]/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4">
+        <div className="md:hidden bg-[#F6F7F8]/95 backdrop-blur-xl border-b border-[#DDDEDF] px-6 py-6 space-y-4">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-mono tracking-widest uppercase text-[#85898C] hover:text-white py-2 border-b border-white/5"
+                className="text-sm font-mono tracking-widest uppercase text-[#373737] hover:text-[#050505] py-2 border-b border-[#DDDEDF]"
               >
                 {link.name}
               </Link>
@@ -123,7 +123,7 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 openQuoteModal();
               }}
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FF5722] text-white text-xs font-mono uppercase tracking-wider font-bold"
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#3b5fc2] text-white text-xs font-mono uppercase tracking-wider font-bold"
             >
               <span>REQUEST A QUOTE</span>
               <ArrowRight className="w-4 h-4" />
