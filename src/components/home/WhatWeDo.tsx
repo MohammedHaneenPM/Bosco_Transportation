@@ -89,7 +89,7 @@ export default function WhatWeDo() {
           </div>
 
           {/* Right Column: 6 Services Grid */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">
             {CORE_SERVICES.map((service, index) => {
               const Icon = iconsMap[service.id] || Truck;
               return (
@@ -98,26 +98,26 @@ export default function WhatWeDo() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-6 flex flex-col justify-between group hover:border-[#3b5fc2]/60 hover:bg-[#FEFEFE] transition-all duration-300 relative"
+                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between group hover:border-[#3b5fc2]/60 hover:bg-[#FEFEFE] transition-all duration-300 relative"
                 >
                   <div>
                     {/* Top Row: Number & Icon */}
-                    <div className="flex items-center justify-between mb-5">
-                      <span className="text-xs font-mono text-[#373737] group-hover:text-[#050505] transition-colors">
+                    <div className="flex items-center justify-between mb-4 sm:mb-5">
+                      <span className="text-[10px] sm:text-xs font-mono text-[#373737] group-hover:text-[#050505] transition-colors">
                         {service.number}
                       </span>
                       <div className="text-[#3b5fc2] group-hover:scale-110 transition-transform">
-                        <Icon className="w-6 h-6" />
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-base font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2 group-hover:text-[#3b5fc2] transition-colors">
+                    <h3 className="text-sm sm:text-base font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2 group-hover:text-[#3b5fc2] transition-colors">
                       {service.title}
                     </h3>
 
                     {/* Short Description */}
-                    <p className="text-xs text-[#373737] leading-relaxed mb-6">
+                    <p className="text-[10px] sm:text-xs text-[#373737] leading-snug sm:leading-relaxed mb-4 sm:mb-6">
                       {service.shortDesc}
                     </p>
                   </div>

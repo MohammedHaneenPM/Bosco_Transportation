@@ -103,18 +103,18 @@ export default function HighValue() {
         {/* Interactive Grid: Left Capabilities & Right Live Route Animation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: 10 Core Security Capabilities in 2-col layout */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 high-value-reveal">
+          <div className="lg:col-span-7 grid grid-cols-2 gap-2 sm:gap-4 high-value-reveal">
             {capabilities.map((cap, index) => {
               const Icon = cap.icon;
               return (
                 <div
                   key={index}
-                  className="flex items-center gap-3.5 p-3.5 bg-[#F7F7F7] border border-[#DDDEDF] hover:border-[#3b5fc2]/40 transition-colors"
+                  className="flex items-center gap-2 sm:gap-3.5 p-2 sm:p-3.5 bg-[#F7F7F7] border border-[#DDDEDF] hover:border-[#3b5fc2]/40 transition-colors"
                 >
-                  <div className="p-2 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] shrink-0">
-                    <Icon className="w-4 h-4" />
+                  <div className="p-1.5 sm:p-2 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] shrink-0">
+                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
-                  <span className="text-xs font-mono text-[#050505] uppercase tracking-wide">
+                  <span className="text-[10px] sm:text-xs font-mono text-[#050505] uppercase tracking-wide leading-tight">
                     {cap.text}
                   </span>
                 </div>

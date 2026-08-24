@@ -105,7 +105,7 @@ export default function Safety() {
         </div>
 
         {/* 8 Safety Standards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {safetyPractices.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -114,7 +114,7 @@ export default function Safety() {
                 ref={(el) => {
                   itemsRef.current[index] = el;
                 }}
-                className="bg-[#F7F7F7] border border-[#DDDEDF] p-6 flex flex-col justify-between hover:border-[#3b5fc2]/50 transition-colors group"
+                className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between hover:border-[#3b5fc2]/50 transition-colors group"
               >
                 <div>
                   <div className="w-10 h-10 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-5 group-hover:bg-[#3b5fc2] group-hover:text-white transition-colors">

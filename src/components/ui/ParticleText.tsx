@@ -41,10 +41,13 @@ export default function ParticleText({
       canvas.width = parent.clientWidth;
       canvas.height = 300; // Fixed height for the footer text
 
+      // Calculate a responsive font size that fits the screen width (maxes out at the passed fontSize prop)
+      const dynamicFontSize = Math.min(fontSize, canvas.width * 0.22);
+
       // Create text
       ctx.fillStyle = "white";
-      // Use a thick sans-serif font
-      ctx.font = `900 ${fontSize}px Inter, sans-serif`;
+      // Use a thick sans-serif font with the dynamic size
+      ctx.font = `900 ${dynamicFontSize}px Inter, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(text, canvas.width / 2, canvas.height / 2);

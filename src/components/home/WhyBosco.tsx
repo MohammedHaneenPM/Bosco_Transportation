@@ -123,7 +123,7 @@ export default function WhyBosco() {
           </div>
 
           {/* Right Column: 4 Columns Grid */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-8 grid grid-cols-2 gap-3 sm:gap-6">
             {strengths.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -132,13 +132,13 @@ export default function WhyBosco() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#FEFEFE] p-8 border border-[#DDDEDF] hover:border-[#3b5fc2] shadow-sm transition-all duration-300 flex flex-col justify-between"
+                  className="bg-[#FEFEFE] p-4 sm:p-6 lg:p-8 border border-[#DDDEDF] hover:border-[#3b5fc2] shadow-sm transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-6">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-4 sm:mb-6">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-base font-bold text-[#050505] font-grotesk tracking-wide uppercase mb-3">
+                    <h3 className="text-sm sm:text-base font-bold text-[#050505] font-grotesk tracking-wide uppercase mb-2 sm:mb-3">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#373737] leading-relaxed">
