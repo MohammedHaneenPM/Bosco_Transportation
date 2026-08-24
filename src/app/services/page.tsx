@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Truck,
   Boxes,
@@ -73,10 +74,13 @@ export default function ServicesPage() {
           {/* Right: Hero Image */}
           <div className="relative h-[300px] lg:h-auto w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-[#FEFEFE] via-[#FEFEFE]/50 to-transparent z-10 pointer-events-none" />
-            <img 
+            <Image 
               src="/Hero image.webp" 
               alt="Bosco Transport Fleet" 
-              className="absolute inset-0 w-full h-full object-cover [mask-image:linear-gradient(to_right,transparent,black_15%)]"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover [mask-image:linear-gradient(to_right,transparent,black_15%)]"
             />
           </div>
         </div>
@@ -112,10 +116,12 @@ export default function ServicesPage() {
                   {/* Image Column */}
                   <div className={`relative h-[300px] sm:h-[400px] lg:h-[500px] w-full bg-[#EAEAEA] border border-[#DDDEDF] ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {imageSrc ? (
-                      <img 
+                      <Image 
                         src={imageSrc} 
                         alt={service.title}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center">

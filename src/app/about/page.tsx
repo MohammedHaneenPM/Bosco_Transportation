@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ShieldCheck, Target, Eye, Award, CheckCircle2, Truck, Users, Route, Clock, Settings } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { COMPANY } from "@/data/company";
@@ -31,10 +32,13 @@ export default function AboutPage() {
           {/* Right: Hero Image */}
           <div className="relative h-[300px] sm:h-[400px] lg:h-auto w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-[#F6F7F8] via-[#F6F7F8]/50 to-transparent z-10 pointer-events-none" />
-            <img 
+            <Image 
               src="/images/HeroimageAbout.webp" 
               alt="Bosco Transport Fleet" 
-              className="absolute inset-0 w-full h-full object-cover [mask-image:linear-gradient(to_right,transparent,black_15%)]"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover [mask-image:linear-gradient(to_right,transparent,black_15%)]"
             />
           </div>
         </div>
