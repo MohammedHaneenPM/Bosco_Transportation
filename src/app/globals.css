@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #0B0D0F;
+  --bg-surface: #14171A;
+  --bg-surface-2: #1B1F23;
+  --bg-surface-elevated: #22272B;
+  --bg-light: #F3F1EC;
+  --bg-light-surface: #FFFFFF;
+  
+  --accent-orange: #FF5722;
+  --accent-orange-hover: #F4511E;
+  --accent-orange-dark: #E64A19;
+  --accent-orange-glow: rgba(255, 87, 34, 0.25);
+  
+  --text-white: #FFFFFF;
+  --text-light-muted: #85898C;
+  --text-light-subtle: #5C6266;
+  --text-dark: #0F1316;
+  --text-dark-muted: #4B5563;
+  
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-dark-subtle: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(0, 0, 0, 0.08);
+}
+
+html {
+  scroll-behavior: auto !important; /* Lenis handles smooth scrolling */
+  background-color: #0B0D0F;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #0B0D0F;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Lenis smooth scrolling base styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom industrial utilities */
+.font-grotesk {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-mono-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Grid background texture */
+.bg-industrial-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-industrial-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+/* Glassmorphism restrained for navbar / metric cards */
+.glass-panel {
+  background: rgba(20, 23, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+  background: rgba(11, 13, 15, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2428;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5722;
+}
+
+/* Orange pulse & glow effects */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.08); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}

@@ -1,0 +1,175 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowRight, Truck, Shield } from "lucide-react";
+import SectionLabel from "@/components/ui/SectionLabel";
+import { FLEET_EQUIPMENT } from "@/data/equipment";
+
+export default function Equipment() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollTrackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      // 1. Initial fade in for the header section
+      gsap.fromTo(
+        ".equipment-header",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+
+      // 2. Horizontal scroll pinned animation
+      const track = scrollTrackRef.current;
+      if (track) {
+        const getScrollAmount = () => -(track.scrollWidth - window.innerWidth + 40);
+
+        const tween = gsap.to(track, {
+          x: getScrollAmount,
+          ease: "none",
+        });
+
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top 10%", 
+          end: () => `+=${Math.abs(getScrollAmount())}`,
+          pin: true,
+          animation: tween,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => {
+             gsap.to(".equipment-progress", { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
+          }
+        });
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section
+      ref={containerRef}
+      className="py-24 bg-[#0B0D0F] border-b border-white/10 relative overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 equipment-header">
+        {/* Section Header with Left Content & Right Controls */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
+          <div className="max-w-xl">
+            <SectionLabel>OUR EQUIPMENT</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-grotesk tracking-tight leading-[1.12] mb-4">
+              THE RIGHT EQUIPMENT <br />
+              FOR THE JOB.
+            </h2>
+            <p className="text-sm sm:text-base text-[#85898C] leading-relaxed">
+              Our versatile fleet capabilities allow us to handle a wide range of freight with safety, appointment compliance, and efficiency across Ontario.
+            </p>
+          </div>
+
+          {/* Controls & CTA */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-[#14171A] hover:bg-[#1B1F23] text-white border border-white/15 text-xs font-mono uppercase tracking-wider transition-colors group"
+            >
+              <span>VIEW ALL SERVICES</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#FF5722] transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Global Progress Bar */}
+        <div className="h-1 w-full bg-white/10 overflow-hidden relative mb-10">
+           <div className="equipment-progress absolute inset-0 bg-[#FF5722] origin-left scale-x-0" />
+        </div>
+      </div>
+
+      <div className="pl-4 sm:pl-6 lg:pl-8 max-w-[100vw]">
+        {/* Horizontal Scroll Track */}
+        <div
+          ref={scrollTrackRef}
+          className="flex gap-6 w-max pr-8 lg:pr-[10vw]"
+        >
+          {FLEET_EQUIPMENT.map((item, index) => (
+            <div
+              key={item.id}
+              className="w-[300px] sm:w-[360px] md:w-[400px] bg-[#14171A] border border-white/10 flex flex-col justify-between group hover:border-[#FF5722]/50 transition-all duration-300 shrink-0"
+            >
+              {/* Card Visual / Header */}
+              <div className="h-56 p-6 border-b border-white/10 relative overflow-hidden flex flex-col justify-between group">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover opacity-50 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#14171A] via-[#14171A]/40 to-transparent pointer-events-none z-0" />
+                
+                <div className="relative z-10 flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-white px-2 py-1 bg-[#FF5722]">
+                    {item.category}
+                  </span>
+                  <Truck className="w-5 h-5 text-white drop-shadow" />
+                </div>
+                <h3 className="relative z-10 text-xl font-bold text-white font-grotesk tracking-wide uppercase mt-auto drop-shadow-lg">
+                  {item.name}
+                </h3>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
+                <div>
+                  <h4 className="text-[11px] font-mono uppercase text-[#85898C] tracking-wider mb-2">
+                    Primary Application:
+                  </h4>
+                  <p className="text-xs text-white/90 leading-relaxed">
+                    {item.application}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-white/5">
+                  <h4 className="text-[10px] font-mono uppercase text-[#5C6266] tracking-widest mb-2.5">
+                    Fleet Capabilities:
+                  </h4>
+                  <ul className="space-y-1.5">
+                    {item.features.map((feat, fIndex) => (
+                      <li
+                        key={fIndex}
+                        className="text-[11px] text-[#85898C] flex items-center gap-2 font-mono"
+                      >
+                        <span className="w-1.5 h-1.5 bg-[#FF5722]" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Bottom Card Bar */}
+              <div className="px-6 py-3 bg-[#101316] border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-[#85898C]">
+                <span className="flex items-center gap-1.5">
+                  <Shield className="w-3.5 h-3.5 text-[#FF5722]" /> Inspected & Compliant
+                </span>
+                <span className="text-white/40">0{index + 1} / 0{FLEET_EQUIPMENT.length}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
