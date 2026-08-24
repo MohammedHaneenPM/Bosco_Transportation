@@ -12,6 +12,7 @@ import { FLEET_EQUIPMENT } from "@/data/equipment";
 export default function Equipment() {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollTrackRef = useRef<HTMLDivElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -57,7 +58,9 @@ export default function Equipment() {
           scrub: 1,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
-             gsap.to(".equipment-progress", { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
+             if (progressRef.current) {
+               gsap.to(progressRef.current, { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
+             }
           }
         });
       }
@@ -100,7 +103,7 @@ export default function Equipment() {
 
           {/* Global Progress Bar */}
           <div className="h-1 w-full bg-[#DDDEDF] overflow-hidden relative mb-10">
-             <div className="equipment-progress absolute inset-0 bg-[#3b5fc2] origin-left scale-x-0" />
+             <div ref={progressRef} className="equipment-progress absolute inset-0 bg-[#3b5fc2] origin-left scale-x-0" />
           </div>
         </div>
 
