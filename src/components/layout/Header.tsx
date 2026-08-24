@@ -62,16 +62,18 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-xs font-mono tracking-widest uppercase transition-colors relative py-1 ${
+                className={`text-xs font-mono tracking-widest uppercase transition-colors duration-200 relative py-1 group ${
                   isActive
                     ? "text-[#3b5fc2] font-bold"
-                    : "text-[#6A6A6A] hover:text-[#050505]"
+                    : "text-[#6A6A6A] hover:text-[#3b5fc2]"
                 }`}
               >
                 {link.name}
-                {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#3b5fc2]" />
-                )}
+                <span 
+                  className={`absolute bottom-0 left-0 h-[2px] bg-[#3b5fc2] transition-all duration-300 ease-out ${
+                    isActive ? "w-full right-0" : "w-0 group-hover:w-full"
+                  }`} 
+                />
               </Link>
             );
           })}

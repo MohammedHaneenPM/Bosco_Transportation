@@ -97,28 +97,64 @@ export default function ServicesPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-24">
             {CORE_SERVICES.map((service, index) => {
               const Icon = iconMap[service.id] || Truck;
+              const imageSrc = serviceImageMap[service.id];
+              const isEven = index % 2 === 0;
+
               return (
                 <div 
                   key={service.id}
-                  className="bg-[#FEFEFE] p-8 lg:p-10 border border-[#DDDEDF] shadow-sm hover:shadow-md transition-shadow group flex flex-col h-full"
+                  id={service.id}
+                  className="scroll-mt-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
                 >
-                  <div className="flex items-center gap-4 mb-8">
-                    <span className="text-4xl font-bold text-[#DDDEDF] group-hover:text-[#3b5fc2]/20 transition-colors font-grotesk">
-                      {service.number}
-                    </span>
-                    <Icon className="w-8 h-8 text-[#3b5fc2] stroke-[1.5]" />
+                  {/* Image Column */}
+                  <div className={`relative h-[300px] sm:h-[400px] lg:h-[500px] w-full bg-[#EAEAEA] border border-[#DDDEDF] ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                    {imageSrc ? (
+                      <img 
+                        src={imageSrc} 
+                        alt={service.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Icon className="w-24 h-24 text-[#DDDEDF]" />
+                      </div>
+                    )}
                   </div>
-                  
-                  <h3 className="text-lg lg:text-xl font-extrabold text-[#050505] font-grotesk uppercase mb-4 tracking-wide">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-sm text-[#373737] leading-relaxed flex-1">
-                    {service.shortDesc}
-                  </p>
+
+                  {/* Text Column */}
+                  <div className={`flex flex-col ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                    <div className="flex items-center gap-4 mb-6">
+                      <span className="text-4xl font-extrabold text-[#DDDEDF] font-grotesk">
+                        {service.number}
+                      </span>
+                      <div className="w-12 h-12 bg-[#FEFEFE] border border-[#DDDEDF] flex items-center justify-center shrink-0 shadow-sm">
+                        <Icon className="w-6 h-6 text-[#3b5fc2]" strokeWidth={1.5} />
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-extrabold text-[#050505] font-grotesk uppercase mb-6 tracking-wide">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-base text-[#373737] leading-relaxed mb-8">
+                      {service.fullDesc}
+                    </p>
+
+                    <div className="space-y-3">
+                      <h4 className="text-xs font-mono font-bold text-[#050505] uppercase tracking-widest mb-4">
+                        Service Highlights
+                      </h4>
+                      {service.highlights.map((highlight, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-[#3b5fc2] shrink-0 mt-0.5" />
+                          <span className="text-sm text-[#373737] leading-relaxed">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -151,15 +187,6 @@ export default function ServicesPage() {
 
             {/* Right Column (Span 8) */}
             <div className="lg:col-span-8 relative">
-              {/* Ontario Map Background */}
-              <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center -mr-4 lg:-mr-12">
-                <img 
-                  src="/images/ontario.webp" 
-                  alt="" 
-                  className="w-[80%] sm:w-[70%] lg:w-[60%] h-auto object-contain opacity-80"
-                />
-              </div>
-
               <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-12">
                 {ADDITIONAL_CAPABILITIES.slice(0, 4).map((cap) => {
                   const Icon = iconMap[cap.id] || Truck;

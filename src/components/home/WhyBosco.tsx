@@ -146,8 +146,7 @@ export default function WhyBosco() {
                     </p>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-[#DDDEDF] flex items-center justify-between text-[11px] font-mono text-[#6A6A6A]">
-                    <span className="text-[#3b5fc2] font-semibold">Standard Practice</span>
+                  <div className="pt-6 mt-6 border-t border-[#DDDEDF] flex items-center justify-end text-[11px] font-mono text-[#6A6A6A]">
                     <span>0{index + 1}</span>
                   </div>
                 </div>

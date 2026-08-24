@@ -6,12 +6,11 @@ import {
   ArrowRight,
   ArrowLeft,
   Truck,
-  ShieldCheck,
   Package,
-  Layers,
   MapPin,
   Clock,
   Sparkles,
+  Cpu,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -25,8 +24,8 @@ const SERVICE_OPTIONS = [
   { id: "ftl", label: "Full Truckload (FTL)", icon: Truck },
   { id: "ltl", label: "Less-Than-Truckload (LTL)", icon: Package },
   { id: "dedicated", label: "Dedicated Transportation", icon: Clock },
-  { id: "high-value", label: "High-Value & Electronics", icon: ShieldCheck },
-  { id: "straight-truck", label: "26' Straight Truck", icon: Layers },
+  { id: "gta-city", label: "GTA & City Deliveries", icon: MapPin },
+  { id: "power-only", label: "Power-Only Transportation", icon: Cpu },
   { id: "specialized", label: "Specialized Freight", icon: Sparkles },
 ];
 
@@ -49,6 +48,8 @@ export default function QuoteForm({
     tailgateRequired: false,
     appointmentRequired: false,
     highValueShipment: false,
+    driverAssistRequired: false,
+    timeSensitive: false,
     company: "",
     name: "",
     email: "",
@@ -111,6 +112,8 @@ export default function QuoteForm({
               tailgateRequired: false,
               appointmentRequired: false,
               highValueShipment: false,
+              driverAssistRequired: false,
+              timeSensitive: false,
               company: "",
               name: "",
               email: "",
@@ -333,15 +336,28 @@ export default function QuoteForm({
             <label className="block text-xs font-mono uppercase text-[#373737] mb-1.5">
               Freight Type / Commodity
             </label>
-            <input
-              type="text"
+            <select
               value={formData.freightType}
               onChange={(e) =>
                 setFormData({ ...formData, freightType: e.target.value })
               }
-              placeholder="e.g. General freight, Electronics, Commercial goods"
-              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
-            />
+              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors appearance-none"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236A6A6A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 1rem center',
+                backgroundSize: '1em'
+              }}
+            >
+              <option value="" disabled>Select Freight Type</option>
+              <option value="General Freight / Palletized Goods">General Freight / Palletized Goods</option>
+              <option value="High-Value / Electronics">High-Value / Electronics</option>
+              <option value="Consumer Goods / Retail">Consumer Goods / Retail</option>
+              <option value="Machinery & Industrial Equipment">Machinery & Industrial Equipment</option>
+              <option value="Construction Materials">Construction Materials</option>
+              <option value="Specialized / Oversized Cargo">Specialized / Oversized Cargo</option>
+              <option value="Other">Other (Specify in notes)</option>
+            </select>
           </div>
 
           {/* Checkbox Options */}
@@ -387,6 +403,34 @@ export default function QuoteForm({
                 className="w-4 h-4 accent-[#3b5fc2] rounded-none bg-[#F7F7F7] border-[#DDDEDF]"
               />
               <span>High-value or electronics cargo (security monitored)</span>
+            </label>
+            <label className="flex items-center gap-3 cursor-pointer text-xs text-[#050505]">
+              <input
+                type="checkbox"
+                checked={formData.driverAssistRequired}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    driverAssistRequired: e.target.checked,
+                  })
+                }
+                className="w-4 h-4 accent-[#3b5fc2] rounded-none bg-[#F7F7F7] border-[#DDDEDF]"
+              />
+              <span>Driver-assisted manual loading/unloading (Hand-bombing)</span>
+            </label>
+            <label className="flex items-center gap-3 cursor-pointer text-xs text-[#050505]">
+              <input
+                type="checkbox"
+                checked={formData.timeSensitive}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    timeSensitive: e.target.checked,
+                  })
+                }
+                className="w-4 h-4 accent-[#3b5fc2] rounded-none bg-[#F7F7F7] border-[#DDDEDF]"
+              />
+              <span>Time-sensitive or expedited transit required</span>
             </label>
           </div>
 

@@ -3,10 +3,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, ShieldAlert, Mail } from "lucide-react";
+import { ShieldAlert, Mail } from "lucide-react";
 import QuoteForm from "@/components/quote/QuoteForm";
 import SectionLabel from "@/components/ui/SectionLabel";
-import { openQuoteModal } from "@/lib/utils";
 
 export default function QuoteCTA() {
   const bannerRef = useRef<HTMLDivElement>(null);
@@ -45,27 +44,14 @@ export default function QuoteCTA() {
           {/* Subtle Blue Glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#3b5fc2]/10 blur-[90px] pointer-events-none" />
 
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 relative z-10">
-            <div>
-              <SectionLabel>START YOUR SHIPMENT</SectionLabel>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-3">
-                READY TO MOVE <br />
-                <span className="text-[#3b5fc2]">YOUR FREIGHT?</span>
-              </h2>
-              <p className="text-sm sm:text-base text-[#373737] max-w-lg leading-relaxed">
-                Let&apos;s discuss how Bosco Transport Inc. can provide dependable, safe, and cost-effective freight transportation for your business across Ontario.
-              </p>
-            </div>
-
-            <div className="shrink-0">
-              <button
-                onClick={openQuoteModal}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider font-bold transition-all shadow-[0_0_25px_rgba(59,95,194,0.3)] hover:shadow-[0_0_35px_rgba(59,95,194,0.5)] group"
-              >
-                <span>REQUEST A QUOTE</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
+          <div className="relative z-10 flex flex-col items-center text-center">
+            <SectionLabel>START YOUR SHIPMENT</SectionLabel>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-4">
+              READY TO MOVE YOUR FREIGHT?
+            </h2>
+            <p className="text-sm sm:text-base text-[#373737] max-w-2xl mx-auto leading-relaxed">
+              Let&apos;s discuss how Bosco Transport Inc. can provide dependable, safe, and cost-effective freight transportation for your business across Ontario.
+            </p>
           </div>
         </div>
 
