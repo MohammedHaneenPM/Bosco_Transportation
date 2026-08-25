@@ -67,11 +67,11 @@ export default function WhatWeDo() {
       className="py-24 bg-[#F6F7F8] relative border-b border-[#DDDEDF]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-16 items-start">
           {/* Left Column */}
           <div ref={leftColRef} className="lg:col-span-5 lg:sticky lg:top-32">
             <SectionLabel>WHAT WE DO</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.12] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.12] mb-6">
               TRANSPORTATION <br />
               SOLUTIONS THAT FIT <br />
               YOUR BUSINESS.
@@ -112,7 +112,7 @@ export default function WhatWeDo() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-sm sm:text-base font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2 group-hover:text-[#3b5fc2] transition-colors">
+                    <h3 className="text-[12px] min-[375px]:text-sm sm:text-base font-bold text-[#050505] font-grotesk uppercase tracking-normal min-[375px]:tracking-wide mb-2 group-hover:text-[#3b5fc2] transition-colors break-words hyphens-auto">
                       {service.title}
                     </h3>
 

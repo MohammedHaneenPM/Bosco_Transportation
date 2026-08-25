@@ -193,8 +193,8 @@ export default function Equipment() {
 
                 {/* Bottom Card Bar */}
                 <div className="px-6 py-3 bg-[#EDEDED] border-t border-[#DDDEDF] flex items-center justify-between text-[11px] font-mono text-[#373737]">
-                  <span className="flex items-center gap-1.5">
-                    <Shield className="w-3.5 h-3.5 text-[#3b5fc2]" /> Inspected & Compliant
+                  <span className="font-bold uppercase tracking-wider">
+                    Fleet
                   </span>
                   <span className="text-[#6A6A6A]">0{index + 1} / 0{FLEET_EQUIPMENT.length}</span>
                 </div>

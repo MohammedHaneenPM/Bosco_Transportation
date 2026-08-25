@@ -20,11 +20,15 @@ import {
 import SectionLabel from "@/components/ui/SectionLabel";
 import { CORE_SERVICES, ADDITIONAL_CAPABILITIES } from "@/data/services";
 import { COMPANY } from "@/data/company";
+import { getBreadcrumbStructuredData } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Transportation Services Ontario | FTL, LTL & Specialized Freight",
   description:
     "Explore Bosco Transport Inc.'s comprehensive freight carrier services across Ontario & GTA: FTL, LTL, dedicated transportation, city deliveries, power-only, and high-value freight.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 const iconMap: Record<string, any> = {
@@ -53,8 +57,17 @@ const serviceImageMap: Record<string, string> = {
 };
 
 export default function ServicesPage() {
+  const breadcrumbData = getBreadcrumbStructuredData([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+  ]);
+
   return (
     <main className="flex-1 bg-[#FEFEFE] pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
       {/* 1. Split Hero Section */}
       <section className="relative overflow-hidden border-b border-[#DDDEDF]">
         <div className="grid grid-cols-1 lg:grid-cols-2">
