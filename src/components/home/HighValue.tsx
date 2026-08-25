@@ -207,7 +207,7 @@ export default function HighValue() {
                     <MapPin className="w-3.5 h-3.5 text-[#3b5fc2]" />
                     <span className="font-bold">PICKUP</span>
                   </div>
-                  <div className="text-[10px] text-[#373737] uppercase tracking-wider">
+                  <div className="text-[10px] text-[#373737] uppercase tracking-wider text-center">
                     Continuous Telematics
                   </div>
                   <div className="flex items-center gap-1.5 text-[#050505]">

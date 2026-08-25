@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { openQuoteModal } from "@/lib/utils";
@@ -35,16 +36,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl font-extrabold tracking-tighter text-[#050505] font-grotesk group-hover:text-[#3b5fc2] transition-colors flex items-center gap-1">
-              BOSCO
-              <span className="w-2 h-2 bg-[#3b5fc2] inline-block mb-0.5"></span>
-            </span>
-            <span className="text-[9px] font-mono tracking-[0.25em] text-[#373737] uppercase -mt-1">
-              TRANSPORT INC.
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group relative w-36 h-12 sm:w-44 sm:h-14">
+          <Image
+            src="/bosco.svg"
+            alt="Bosco Transport Inc."
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -92,7 +91,7 @@ export default function Header() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-[#050505] hover:text-[#3b5fc2] border border-[#DDDEDF] rounded-full"
+          className="md:hidden p-2 text-[#050505] hover:text-[#3b5fc2] transition-colors"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? (

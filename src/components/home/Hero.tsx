@@ -60,8 +60,8 @@ export default function Hero() {
       className="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden bg-[#F6F7F8]"
     >
       {/* Background Graphic & Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#F6F7F8] via-[#F6F7F8]/30 to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#F6F7F8] via-transparent to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#F6F7F8] via-[#F6F7F8]/90 to-[#F6F7F8]/40 sm:via-[#F6F7F8]/60 sm:to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#F6F7F8] via-[#F6F7F8]/40 sm:via-transparent to-transparent z-10 pointer-events-none" />
 
       {/* Hero Background Image */}
       <div
@@ -90,8 +90,8 @@ export default function Hero() {
             ref={headingRef}
             className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-[#050505] tracking-tight leading-[1.06] font-grotesk opacity-0 mb-6"
           >
-            TRANSPORTATION <br />
-            YOU CAN <br />
+            Transportation <br />
+            You Can <br />
             <span className="text-[#3b5fc2] drop-shadow-[0_0_25px_rgba(59,95,194,0.4)]">
               COUNT ON.
             </span>

@@ -66,16 +66,22 @@ export default function Metrics() {
       className="relative z-30 bg-[#F6F7F8] border-t border-b border-[#DDDEDF]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#DDDEDF]">
+        <div className="grid grid-cols-2 lg:grid-cols-4">
           {metrics.map((item, index) => {
             const Icon = item.icon;
+            
+            let borderClasses = "";
+            if (index === 1) borderClasses = "border-l border-[#DDDEDF]";
+            else if (index === 2) borderClasses = "border-t lg:border-t-0 lg:border-l border-[#DDDEDF]";
+            else if (index === 3) borderClasses = "border-l border-t lg:border-t-0 border-[#DDDEDF]";
+
             return (
               <div
                 key={item.label}
                 ref={(el) => {
                   cardsRef.current[index] = el;
                 }}
-                className="py-6 px-3 sm:py-8 sm:px-6 flex flex-col xl:flex-row items-center sm:items-start xl:items-center text-center sm:text-left gap-3 sm:gap-5 hover:bg-black/[0.02] transition-colors"
+                className={`py-6 px-3 sm:py-8 sm:px-6 flex flex-col xl:flex-row items-center sm:items-start xl:items-center text-center sm:text-left gap-3 sm:gap-5 hover:bg-black/[0.02] transition-colors ${borderClasses}`}
               >
                 <div className="p-2 sm:p-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#3b5fc2] shrink-0 rounded-xl">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
