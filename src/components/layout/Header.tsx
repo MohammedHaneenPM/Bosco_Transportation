@@ -36,7 +36,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center group relative w-36 h-12 sm:w-44 sm:h-14">
+        <Link href="/" className="flex items-center group relative w-28 h-8 sm:w-36 sm:h-10">
           <Image
             src="/bosco.svg"
             alt="Bosco Transport Inc."
