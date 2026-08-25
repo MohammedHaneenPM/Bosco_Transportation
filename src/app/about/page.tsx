@@ -126,7 +126,7 @@ export default function AboutPage() {
 
               {/* 2016 / Today Badge Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
-                <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF]">
+                <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] rounded-2xl">
                   <span className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk block mb-1">
                     2016
                   </span>
@@ -137,7 +137,7 @@ export default function AboutPage() {
                     Founded in Ontario as a dedicated carrier and logistics partner.
                   </span>
                 </div>
-                <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF]">
+                <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] rounded-2xl">
                   <span className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk block mb-1">
                     TODAY
                   </span>
@@ -159,8 +159,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Mission Card */}
-            <div className="p-8 sm:p-10 bg-[#F7F7F7] border border-[#DDDEDF] relative group hover:border-[#3b5fc2]/60 transition-colors">
-              <div className="w-12 h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-6">
+            <div className="p-8 sm:p-10 bg-[#F7F7F7] border border-[#DDDEDF] relative group hover:border-[#3b5fc2]/60 transition-colors rounded-2xl">
+              <div className="w-12 h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-6 rounded-full">
                 <Target className="w-6 h-6" />
               </div>
               <span className="text-xs font-mono text-[#3b5fc2] uppercase tracking-widest block mb-2">
@@ -175,8 +175,8 @@ export default function AboutPage() {
             </div>
 
             {/* Vision Card */}
-            <div className="p-8 sm:p-10 bg-[#F7F7F7] border border-[#DDDEDF] relative group hover:border-[#3b5fc2]/60 transition-colors">
-              <div className="w-12 h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-6">
+            <div className="p-8 sm:p-10 bg-[#F7F7F7] border border-[#DDDEDF] relative group hover:border-[#3b5fc2]/60 transition-colors rounded-2xl">
+              <div className="w-12 h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-6 rounded-full">
                 <Eye className="w-6 h-6" />
               </div>
               <span className="text-xs font-mono text-[#3b5fc2] uppercase tracking-widest block mb-2">
@@ -216,7 +216,7 @@ export default function AboutPage() {
             ].map((val, idx) => (
               <div
                 key={val.title}
-                className="bg-[#FEFEFE] p-6 border border-[#DDDEDF] flex flex-col justify-between"
+                className="bg-[#FEFEFE] p-6 border border-[#DDDEDF] flex flex-col justify-between rounded-2xl"
               >
                 <div>
                   <span className="text-xs font-mono text-[#3b5fc2] font-bold block mb-2">
@@ -246,7 +246,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/#quote"
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider font-bold transition-colors shadow-lg"
+            className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider font-bold transition-colors shadow-lg rounded-full"
           >
             <span>REQUEST A FREIGHT QUOTE</span>
             <ArrowRight className="w-4 h-4" />

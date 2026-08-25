@@ -37,7 +37,7 @@ export default function QuoteModal() {
       />
 
       {/* Modal Card */}
-      <div className="relative w-full max-w-2xl bg-[#F6F7F8] border border-[#DDDEDF] p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-[#F6F7F8] border border-[#DDDEDF] p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto rounded-3xl">
         <div className="flex items-center justify-between pb-4 border-b border-[#DDDEDF] mb-6">
           <div>
             <div className="flex items-center gap-2 text-[#3b5fc2] text-xs font-mono uppercase tracking-widest">
@@ -50,7 +50,7 @@ export default function QuoteModal() {
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 text-[#6A6A6A] hover:text-[#050505] hover:bg-[#DDDEDF]/50 border border-transparent hover:border-[#DDDEDF] transition-colors"
+            className="p-2 text-[#6A6A6A] hover:text-[#050505] hover:bg-[#DDDEDF]/50 border border-transparent hover:border-[#DDDEDF] transition-colors rounded-full"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />

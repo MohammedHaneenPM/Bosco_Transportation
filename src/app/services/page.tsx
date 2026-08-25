@@ -114,7 +114,7 @@ export default function ServicesPage() {
                   className="scroll-mt-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
                 >
                   {/* Image Column */}
-                  <div className={`relative h-[300px] sm:h-[400px] lg:h-[500px] w-full bg-[#EAEAEA] border border-[#DDDEDF] ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative h-[300px] sm:h-[400px] lg:h-[500px] w-full bg-[#EAEAEA] border border-[#DDDEDF] rounded-3xl overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {imageSrc ? (
                       <Image 
                         src={imageSrc} 
@@ -136,7 +136,7 @@ export default function ServicesPage() {
                       <span className="text-4xl font-extrabold text-[#DDDEDF] font-grotesk">
                         {service.number}
                       </span>
-                      <div className="w-12 h-12 bg-[#FEFEFE] border border-[#DDDEDF] flex items-center justify-center shrink-0 shadow-sm">
+                      <div className="w-12 h-12 bg-[#FEFEFE] border border-[#DDDEDF] flex items-center justify-center shrink-0 shadow-sm rounded-full">
                         <Icon className="w-6 h-6 text-[#3b5fc2]" strokeWidth={1.5} />
                       </div>
                     </div>
@@ -233,7 +233,7 @@ export default function ServicesPage() {
       {/* 4. CTA Horizontal Bar */}
       <section className="py-16 bg-[#F6F7F8] border-t border-b border-[#DDDEDF]">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#FEFEFE] border border-[#DDDEDF] p-8 lg:p-12 shadow-sm rounded-sm">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#FEFEFE] border border-[#DDDEDF] p-8 lg:p-12 shadow-sm rounded-3xl">
             <div className="flex items-center gap-6">
               <div className="hidden sm:flex w-16 h-16 rounded-full bg-[#3b5fc2]/10 items-center justify-center border border-[#3b5fc2]/20 shrink-0">
                 <ShieldCheck className="w-8 h-8 text-[#3b5fc2] stroke-[1.5]" />
@@ -250,7 +250,7 @@ export default function ServicesPage() {
             
             <Link
               href="/#quote"
-              className="shrink-0 inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase font-bold tracking-widest transition-colors w-full md:w-auto"
+              className="shrink-0 inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase font-bold tracking-widest transition-colors w-full md:w-auto rounded-full"
             >
               REQUEST A QUOTE
               <ArrowRight className="w-4 h-4" />

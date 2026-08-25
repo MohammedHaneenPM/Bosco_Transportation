@@ -90,7 +90,7 @@ export default function QuoteForm({
   if (submitted) {
     return (
       <div className={cn("p-8 text-center", className)}>
-        <div className="w-16 h-16 bg-[#3b5fc2]/10 border border-[#3b5fc2] rounded-none flex items-center justify-center mx-auto mb-6 text-[#3b5fc2]">
+        <div className="w-16 h-16 bg-[#3b5fc2]/10 border border-[#3b5fc2] rounded-full flex items-center justify-center mx-auto mb-6 text-[#3b5fc2]">
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <h3 className="text-2xl font-bold text-[#050505] mb-3">Quote Request Received</h3>
@@ -121,7 +121,7 @@ export default function QuoteForm({
               message: "",
             });
           }}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#EDEDED] hover:bg-[#DDDEDF] text-[#050505] text-xs font-mono uppercase tracking-wider border border-[#DDDEDF] transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#EDEDED] hover:bg-[#DDDEDF] text-[#050505] text-xs font-mono uppercase tracking-wider border border-[#DDDEDF] transition-colors rounded-full"
         >
           Submit Another Request
         </button>
@@ -142,7 +142,7 @@ export default function QuoteForm({
           <div key={s.num} className="flex items-center gap-2">
             <div
               className={cn(
-                "w-6 h-6 rounded-none flex items-center justify-center text-xs font-mono transition-colors",
+                "w-6 h-6 rounded-full flex items-center justify-center text-xs font-mono transition-colors",
                 step === s.num
                   ? "bg-[#3b5fc2] text-white font-bold"
                   : step > s.num
@@ -185,7 +185,7 @@ export default function QuoteForm({
                   type="button"
                   onClick={() => handleServiceSelect(item.id)}
                   className={cn(
-                    "p-4 text-left border flex items-center gap-3.5 transition-all",
+                    "p-4 text-left border flex items-center gap-3.5 transition-all rounded-xl",
                     isSelected
                       ? "border-[#3b5fc2] bg-[#3b5fc2]/10 text-[#050505]"
                       : "border-[#DDDEDF] bg-[#F7F7F7] text-[#373737] hover:border-[#DDDEDF] hover:text-[#050505]"
@@ -193,7 +193,7 @@ export default function QuoteForm({
                 >
                   <div
                     className={cn(
-                      "p-2 border",
+                      "p-2 border rounded-lg",
                       isSelected
                         ? "border-[#3b5fc2] bg-[#3b5fc2] text-white"
                         : "border-[#DDDEDF] bg-[#EDEDED] text-[#373737]"
@@ -214,7 +214,7 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={() => setStep(2)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors rounded-full"
             >
               Next: Routing <ArrowRight className="w-3.5 h-3.5" />
             </button>
@@ -250,7 +250,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, origin: e.target.value })
                 }
                 placeholder="e.g. Mississauga, ON (L5T 1B3)"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
 
@@ -266,7 +266,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, destination: e.target.value })
                 }
                 placeholder="e.g. Vaughan, ON (L4K 4M5)"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function QuoteForm({
             </button>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors rounded-full"
             >
               Next: Freight Details <ArrowRight className="w-3.5 h-3.5" />
             </button>
@@ -313,7 +313,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, weight: e.target.value })
                 }
                 placeholder="e.g. 15,000 lbs"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
             <div>
@@ -327,7 +327,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, palletCount: e.target.value })
                 }
                 placeholder="e.g. 12 Skids"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
           </div>
@@ -341,7 +341,7 @@ export default function QuoteForm({
               onChange={(e) =>
                 setFormData({ ...formData, freightType: e.target.value })
               }
-              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors appearance-none"
+              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors appearance-none rounded-xl"
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236A6A6A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
                 backgroundRepeat: 'no-repeat',
@@ -444,7 +444,7 @@ export default function QuoteForm({
             </button>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors rounded-full"
             >
               Next: Contact Info <ArrowRight className="w-3.5 h-3.5" />
             </button>
@@ -477,7 +477,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, company: e.target.value })
                 }
                 placeholder="Business or 3PL Name"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
             <div>
@@ -492,7 +492,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, name: e.target.value })
                 }
                 placeholder="Your Full Name"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
           </div>
@@ -510,7 +510,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, email: e.target.value })
                 }
                 placeholder="name@company.com"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
             <div>
@@ -525,7 +525,7 @@ export default function QuoteForm({
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 placeholder="(416) 000-0000"
-                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors"
+                className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors rounded-xl"
               />
             </div>
           </div>
@@ -541,7 +541,7 @@ export default function QuoteForm({
                 setFormData({ ...formData, message: e.target.value })
               }
               placeholder="Any specific delivery instructions, timing requirements, or broker notes..."
-              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors resize-none"
+              className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#050505] placeholder-[#6A6A6A] text-sm focus:outline-none focus:border-[#3b5fc2] transition-colors resize-none rounded-xl"
             />
           </div>
 
@@ -556,7 +556,7 @@ export default function QuoteForm({
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center gap-2 px-7 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors disabled:opacity-50"
+              className="inline-flex items-center gap-2 px-7 py-3 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors disabled:opacity-50 rounded-full"
             >
               {loading ? "Transmitting..." : "Submit Quote Request"}
               <ArrowRight className="w-3.5 h-3.5" />

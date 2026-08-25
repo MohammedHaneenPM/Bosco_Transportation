@@ -109,9 +109,9 @@ export default function HighValue() {
               return (
                 <div
                   key={index}
-                  className="flex items-center gap-2 sm:gap-3.5 p-2 sm:p-3.5 bg-[#F7F7F7] border border-[#DDDEDF] hover:border-[#3b5fc2]/40 transition-colors"
+                  className="flex items-center gap-2 sm:gap-3.5 p-2 sm:p-3.5 bg-[#F7F7F7] border border-[#DDDEDF] hover:border-[#3b5fc2]/40 transition-colors rounded-xl"
                 >
-                  <div className="p-1.5 sm:p-2 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] shrink-0">
+                  <div className="p-1.5 sm:p-2 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] shrink-0 rounded-full">
                     <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                   <span className="text-[10px] sm:text-xs font-mono text-[#050505] uppercase tracking-wide leading-tight">
@@ -123,7 +123,7 @@ export default function HighValue() {
           </div>
 
           {/* Right Column: Signature Transit Route Illustration */}
-          <div className="lg:col-span-5 bg-[#F7F7F7] border border-[#DDDEDF] p-8 relative high-value-reveal">
+          <div className="lg:col-span-5 bg-[#F7F7F7] border border-[#DDDEDF] p-8 relative high-value-reveal rounded-3xl">
             <div className="flex items-center justify-between mb-6 border-b border-[#DDDEDF] pb-4">
               <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#3b5fc2] tracking-widest">
                 <span className="w-2 h-2 rounded-full bg-[#3b5fc2] animate-ping" />
@@ -135,7 +135,7 @@ export default function HighValue() {
             </div>
 
             {/* Route Map Graphic */}
-            <div className="relative py-8 px-4 bg-[#FEFEFE] border border-[#DDDEDF] flex flex-col justify-center items-center">
+            <div className="relative py-8 px-4 bg-[#FEFEFE] border border-[#DDDEDF] flex flex-col justify-center items-center rounded-2xl">
               <div className="w-full max-w-[340px] relative">
                 {/* SVG Route Line */}
                 <svg

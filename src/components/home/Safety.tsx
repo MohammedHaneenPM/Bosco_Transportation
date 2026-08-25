@@ -114,10 +114,10 @@ export default function Safety() {
                 ref={(el) => {
                   itemsRef.current[index] = el;
                 }}
-                className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between hover:border-[#3b5fc2]/50 transition-colors group"
+                className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between hover:border-[#3b5fc2]/50 transition-colors group rounded-2xl"
               >
                 <div>
-                  <div className="w-10 h-10 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-5 group-hover:bg-[#3b5fc2] group-hover:text-white transition-colors">
+                  <div className="w-10 h-10 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-5 group-hover:bg-[#3b5fc2] group-hover:text-white transition-colors rounded-full">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-sm font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2">

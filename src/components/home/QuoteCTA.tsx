@@ -39,7 +39,7 @@ export default function QuoteCTA() {
         {/* Top Banner Matching Reference Image */}
         <div
           ref={bannerRef}
-          className="bg-[#F7F7F7] border border-[#DDDEDF] p-8 sm:p-12 mb-16 relative overflow-hidden"
+          className="bg-[#F7F7F7] border border-[#DDDEDF] p-8 sm:p-12 mb-16 relative overflow-hidden rounded-3xl"
         >
           {/* Subtle Blue Glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#3b5fc2]/10 blur-[90px] pointer-events-none" />
@@ -58,7 +58,7 @@ export default function QuoteCTA() {
         {/* Embedded Freight Quote Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-4 space-y-6">
-            <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-4">
+            <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-4 rounded-2xl">
               <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#3b5fc2] tracking-widest">
                 <ShieldAlert className="w-4 h-4" />
                 <span>Ontario Dispatch Center</span>
@@ -71,7 +71,7 @@ export default function QuoteCTA() {
               </p>
             </div>
 
-            <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-3 font-mono text-xs text-[#373737]">
+            <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-3 font-mono text-xs text-[#373737] rounded-2xl">
               <div className="flex items-center gap-3 text-[#050505]">
                 <Mail className="w-4 h-4 text-[#3b5fc2]" />
                 <span>dispatch@boscotransport.ca</span>
@@ -82,7 +82,7 @@ export default function QuoteCTA() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 bg-[#F7F7F7] border border-[#DDDEDF] p-6 sm:p-10 shadow-xl">
+          <div className="lg:col-span-8 bg-[#F7F7F7] border border-[#DDDEDF] p-6 sm:p-10 shadow-xl rounded-3xl">
             <QuoteForm />
           </div>
         </div>

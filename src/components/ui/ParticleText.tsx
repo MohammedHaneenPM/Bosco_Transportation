@@ -47,7 +47,7 @@ export default function ParticleText({
       // Create text
       ctx.fillStyle = "white";
       // Use a thick sans-serif font with the dynamic size
-      ctx.font = `900 ${dynamicFontSize}px Inter, sans-serif`;
+      ctx.font = `900 ${dynamicFontSize}px "Open Sans", sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(text, canvas.width / 2, canvas.height / 2);

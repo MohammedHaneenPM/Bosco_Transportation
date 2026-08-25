@@ -108,7 +108,7 @@ export default function Footer() {
             <p className="text-xs leading-relaxed">
               Reliable • Safe • Flexible • Professional • Cost-Effective
             </p>
-            <div className="p-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[11px] text-[#373737] font-mono leading-relaxed">
+            <div className="p-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[11px] text-[#373737] font-mono leading-relaxed rounded-2xl">
               Experience supporting direct shippers, dedicated customers, 3PL partners, and freight brokers across Ontario.
             </div>
           </div>

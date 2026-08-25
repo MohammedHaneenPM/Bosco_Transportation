@@ -34,7 +34,7 @@ export default function Equipment() {
         }
       );
 
-      // 2. Horizontal scroll pinned animation
+      // 2. Horizontal scroll pinned animation (responsive)
       const track = scrollTrackRef.current;
       if (track) {
         const getScrollAmount = () => {
@@ -44,24 +44,44 @@ export default function Equipment() {
           return 0;
         };
 
-        const tween = gsap.to(track, {
-          x: getScrollAmount,
-          ease: "none",
+        const mm = gsap.matchMedia();
+
+        // Desktop
+        mm.add("(min-width: 1024px)", () => {
+          const tween = gsap.to(track, { x: getScrollAmount, ease: "none" });
+          ScrollTrigger.create({
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            end: () => `+=${Math.abs(getScrollAmount())}`,
+            pin: true,
+            animation: tween,
+            scrub: true,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => {
+              if (progressRef.current) {
+                gsap.to(progressRef.current, { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
+              }
+            }
+          });
         });
 
-        ScrollTrigger.create({
-          trigger: containerRef.current,
-          start: "center center", 
-          end: () => `+=${Math.abs(getScrollAmount())}`,
-          pin: true,
-          animation: tween,
-          scrub: 1,
-          invalidateOnRefresh: true,
-          onUpdate: (self) => {
-             if (progressRef.current) {
-               gsap.to(progressRef.current, { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
-             }
-          }
+        // Mobile / Tablet
+        mm.add("(max-width: 1023px)", () => {
+          const tween = gsap.to(track, { x: getScrollAmount, ease: "none" });
+          ScrollTrigger.create({
+            trigger: containerRef.current,
+            start: "bottom bottom",
+            end: () => `+=${Math.abs(getScrollAmount())}`,
+            pin: true,
+            animation: tween,
+            scrub: true,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => {
+              if (progressRef.current) {
+                gsap.to(progressRef.current, { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
+              }
+            }
+          });
         });
       }
     }, containerRef);
@@ -93,7 +113,7 @@ export default function Equipment() {
             <div className="flex items-center gap-4">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-5 py-3 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] text-xs font-mono uppercase tracking-wider transition-colors group"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] text-xs font-mono uppercase tracking-wider transition-colors group rounded-full"
               >
                 <span>VIEW ALL SERVICES</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#3b5fc2] transition-transform group-hover:translate-x-1" />
@@ -103,7 +123,7 @@ export default function Equipment() {
 
           {/* Global Progress Bar */}
           <div className="h-1 w-full bg-[#DDDEDF] overflow-hidden relative mb-10">
-             <div ref={progressRef} className="equipment-progress absolute inset-0 bg-[#3b5fc2] origin-left scale-x-0" />
+            <div ref={progressRef} className="equipment-progress absolute inset-0 bg-[#3b5fc2] origin-left scale-x-0" />
           </div>
         </div>
 
@@ -116,24 +136,26 @@ export default function Equipment() {
             {FLEET_EQUIPMENT.map((item, index) => (
               <div
                 key={item.id}
-                className="w-[300px] sm:w-[360px] md:w-[400px] bg-[#F7F7F7] border border-[#DDDEDF] flex flex-col justify-between group hover:border-[#3b5fc2]/50 transition-all duration-300 shrink-0"
+                className="w-[300px] sm:w-[360px] md:w-[400px] bg-[#F7F7F7] border border-[#DDDEDF] flex flex-col justify-between group hover:border-[#3b5fc2]/50 transition-all duration-300 shrink-0 rounded-3xl overflow-hidden"
               >
                 {/* Card Visual / Header */}
-                <div className="h-48 p-6 border-b border-[#DDDEDF] relative overflow-hidden flex flex-col justify-between group">
+                <div className="aspect-[4/3] p-6 border-b border-[#DDDEDF] relative overflow-hidden flex flex-col justify-between group">
                   <Image
                     src={item.image}
                     alt={item.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#F7F7F7] via-[#F7F7F7]/60 to-transparent pointer-events-none z-0" />
-                  
-                  <div className="relative z-10 flex items-center justify-between">
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#F7F7F7] via-[#F7F7F7]/40 to-transparent pointer-events-none z-0" />
+
+                  <div className="relative z-10 flex items-start justify-between">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-white px-2 py-1 bg-[#3b5fc2]">
                       {item.category}
                     </span>
-                    <Truck className="w-5 h-5 text-[#050505] drop-shadow-sm" />
+                    <div className="w-8 h-8 bg-[#FEFEFE] rounded-full flex items-center justify-center shadow-sm">
+                      <Truck className="w-4 h-4 text-[#050505]" />
+                    </div>
                   </div>
                   <h3 className="relative z-10 text-xl font-bold text-[#050505] font-grotesk tracking-wide uppercase mt-auto drop-shadow-sm">
                     {item.name}

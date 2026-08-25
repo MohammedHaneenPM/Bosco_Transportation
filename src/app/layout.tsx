@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -6,6 +7,11 @@ import QuoteModal from "@/components/quote/QuoteModal";
 import LenisProvider from "@/components/ui/LenisProvider";
 import CustomCursor from "@/components/ui/CustomCursor";
 import { getLogisticsStructuredData } from "@/lib/seo";
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
 
 export const viewport: Viewport = {
   themeColor: "#F6F7F8",
@@ -75,7 +81,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="min-h-screen bg-[#F6F7F8] text-[#050505] flex flex-col antialiased selection:bg-[#3b5fc2] selection:text-white"
+        className={`${openSans.className} ${openSans.variable} min-h-screen bg-[#F6F7F8] text-[#050505] flex flex-col antialiased selection:bg-[#3b5fc2] selection:text-white`}
         suppressHydrationWarning
       >
         <LenisProvider>
