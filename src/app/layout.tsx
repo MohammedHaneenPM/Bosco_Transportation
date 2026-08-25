@@ -23,21 +23,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://boscotransport.ca"),
   title: {
-    default: "Bosco Transport Inc. | Transportation & Logistics Ontario",
+    default: "Bosco Transport Inc. | Freight Transportation & Logistics Ontario",
     template: "%s | Bosco Transport Inc.",
   },
   description:
     "Founded in 2016, Bosco Transport Inc. is an Ontario-based freight transportation and logistics company providing dependable FTL, LTL, dedicated, and specialized solutions across Ontario and the GTA.",
   keywords: [
-    "Bosco Transport",
-    "Ontario trucking company",
-    "GTA freight transportation",
+    "Ontario freight transportation",
+    "GTA transportation",
+    "freight carrier Ontario",
+    "transportation company Ontario",
+    "logistics services Ontario",
     "FTL carrier Ontario",
     "LTL transport Toronto",
     "Dedicated transportation Ontario",
-    "Electronics freight transport Canada",
     "High-value cargo trucking Ontario",
-    "Straight truck delivery GTA",
   ],
   authors: [{ name: "Bosco Transport Inc." }],
   openGraph: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://boscotransport.ca",
     siteName: "Bosco Transport Inc.",
-    title: "Bosco Transport Inc. | Transportation & Logistics Ontario",
+    title: "Bosco Transport Inc. | Freight Transportation & Logistics Ontario",
     description:
       "Reliable transportation solutions across Ontario and the GTA. Built on trust, driven by professionalism.",
     images: [

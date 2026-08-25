@@ -46,43 +46,38 @@ export default function Safety() {
   const safetyPractices = [
     {
       title: "Pre-Trip & Post-Trip Inspections",
-      desc: "Mandatory daily commercial vehicle walk-around inspections ensuring mechanical and road readiness.",
+      desc: "Vehicle inspections before and after operation to support safe and reliable transportation.",
       icon: ClipboardCheck,
     },
     {
-      title: "Hours-of-Service & Electronic Logging",
-      desc: "Strict compliance with provincial and federal driving hours using certified electronic logging devices (ELD).",
+      title: "Hours-of-Service Compliance",
+      desc: "Compliance with applicable hours-of-service requirements and electronic logging procedures.",
       icon: Clock,
     },
     {
-      title: "Load Securement & Cargo Protection",
-      desc: "Approved blocking, bracing, e-track strapping, and load locks to safeguard goods throughout transit.",
+      title: "Load Securement",
+      desc: "Proper load securement practices to protect freight throughout transportation.",
       icon: Lock,
     },
     {
       title: "Preventive Vehicle Maintenance",
-      desc: "Scheduled maintenance programs conducted on all highway tractors, straight trucks, and trailers.",
+      desc: "Preventive maintenance procedures for transportation equipment.",
       icon: Wrench,
     },
     {
-      title: "Safe Loading & Unloading Procedures",
-      desc: "Certified handling protocols during forklift operation, dock placement, and ground-level tailgate discharge.",
+      title: "Safe Loading & Unloading",
+      desc: "Careful loading and unloading procedures based on shipment and site requirements.",
       icon: PackageCheck,
     },
     {
-      title: "Professional Customer-Site Protocols",
-      desc: "Trained driver conduct adhering strictly to facility check-in, safety gear, and gate guidelines.",
+      title: "Professional Customer-Site Procedures",
+      desc: "Professional conduct and procedures at customer facilities.",
       icon: Building,
     },
     {
-      title: "Dispatch & Proof-of-Delivery Documentation",
-      desc: "Accurate paperwork, electronic proof of delivery (POD), and transparent document management.",
+      title: "Dispatch & Delivery Documentation",
+      desc: "Accurate paperwork, dispatch communication and proof-of-delivery documentation.",
       icon: FileCheck2,
-    },
-    {
-      title: "Continuous Safety Monitoring",
-      desc: "Active operational safety oversight, road monitoring, and continuous driver safety training.",
-      icon: ShieldAlert,
     },
   ];
 

@@ -142,7 +142,7 @@ export default function Equipment() {
                 <div className="aspect-[4/3] p-6 border-b border-[#DDDEDF] relative overflow-hidden flex flex-col justify-between group">
                   <Image
                     src={item.image}
-                    alt={item.name}
+                    alt={item.altText || item.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"

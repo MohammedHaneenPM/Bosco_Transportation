@@ -82,7 +82,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Badge */}
           <div ref={badgeRef} className="opacity-0">
-            <SectionLabel>RELIABLE. SAFE. ON TIME.</SectionLabel>
+            <SectionLabel>RELIABLE • SAFE • FLEXIBLE • PROFESSIONAL • COST-EFFECTIVE</SectionLabel>
           </div>
 
           {/* Heading */}

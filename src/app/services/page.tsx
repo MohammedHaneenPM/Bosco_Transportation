@@ -22,7 +22,7 @@ import { CORE_SERVICES, ADDITIONAL_CAPABILITIES } from "@/data/services";
 import { COMPANY } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Transportation & Freight Services | Bosco Transport Inc. Ontario",
+  title: "Transportation Services Ontario | FTL, LTL & Specialized Freight",
   description:
     "Explore Bosco Transport Inc.'s comprehensive freight carrier services across Ontario & GTA: FTL, LTL, dedicated transportation, city deliveries, power-only, and high-value freight.",
 };
@@ -63,9 +63,9 @@ export default function ServicesPage() {
             <div className="text-xs font-mono text-[#6A6A6A] mb-8">
               Home / <span className="text-[#050505] font-bold">Services</span>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-6 uppercase">
-              OUR <br />
-              <span className="text-[#3b5fc2]">SERVICES</span>
+            <h1 className="text-5xl lg:text-7xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-6">
+              Our <br />
+              <span className="text-[#3b5fc2] uppercase">SERVICES.</span>
             </h1>
             <p className="text-base sm:text-lg text-[#373737] leading-relaxed max-w-md">
               Reliable, safe and cost-effective transportation solutions across Ontario and the GTA. From full truckload to specialized freight, we deliver with professionalism you can count on.
@@ -74,9 +74,9 @@ export default function ServicesPage() {
           {/* Right: Hero Image */}
           <div className="relative h-[300px] lg:h-auto w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-[#FEFEFE] via-[#FEFEFE]/50 to-transparent z-10 pointer-events-none" />
-            <Image 
-              src="/Hero image.webp" 
-              alt="Bosco Transport Fleet" 
+            <Image
+              src="/Hero image.webp"
+              alt="Bosco Transport Fleet"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -108,7 +108,7 @@ export default function ServicesPage() {
               const isEven = index % 2 === 0;
 
               return (
-                <div 
+                <div
                   key={service.id}
                   id={service.id}
                   className="scroll-mt-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
@@ -116,8 +116,8 @@ export default function ServicesPage() {
                   {/* Image Column */}
                   <div className={`relative h-[300px] sm:h-[400px] lg:h-[500px] w-full bg-[#EAEAEA] border border-[#DDDEDF] rounded-3xl overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {imageSrc ? (
-                      <Image 
-                        src={imageSrc} 
+                      <Image
+                        src={imageSrc}
                         alt={service.title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
@@ -140,11 +140,11 @@ export default function ServicesPage() {
                         <Icon className="w-6 h-6 text-[#3b5fc2]" strokeWidth={1.5} />
                       </div>
                     </div>
-                    
+
                     <h3 className="text-2xl lg:text-3xl font-extrabold text-[#050505] font-grotesk uppercase mb-6 tracking-wide">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-base text-[#373737] leading-relaxed mb-8">
                       {service.fullDesc}
                     </p>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
       <section className="py-20 lg:py-28 bg-[#FEFEFE] border-t border-[#DDDEDF]">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            
+
             {/* Left Column (Span 4) */}
             <div className="lg:col-span-4 flex flex-col items-start relative">
               <div className="relative z-10">
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                 </p>
               </div>
             </div>
-            
+
             <Link
               href="/#quote"
               className="shrink-0 inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase font-bold tracking-widest transition-colors w-full md:w-auto rounded-full"

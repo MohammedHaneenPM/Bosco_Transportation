@@ -11,6 +11,7 @@ import {
   Clock,
   Sparkles,
   Cpu,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +28,7 @@ const SERVICE_OPTIONS = [
   { id: "gta-city", label: "GTA & City Deliveries", icon: MapPin },
   { id: "power-only", label: "Power-Only Transportation", icon: Cpu },
   { id: "specialized", label: "Specialized Freight", icon: Sparkles },
+  { id: "high-value", label: "High-Value & Electronics", icon: ShieldCheck },
 ];
 
 export default function QuoteForm({

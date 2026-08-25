@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import { COMPANY } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "About Bosco Transport Inc. | Ontario Transportation & Logistics",
+  title: "About Bosco Transport Inc. | Ontario Transportation Company",
   description:
     "Founded in 2016, Bosco Transport Inc. is an Ontario-based freight transportation and logistics company providing dependable FTL, LTL, dedicated, and specialized services.",
 };
@@ -21,8 +21,9 @@ export default function AboutPage() {
           <div className="px-4 sm:px-6 lg:px-16 py-16 lg:py-24 flex flex-col justify-center max-w-2xl lg:ml-auto w-full relative z-20">
             <SectionLabel>ABOUT BOSCO TRANSPORT INC.</SectionLabel>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-6 mt-6 max-w-3xl">
-              BUILT ON TRUST. <br />
-              <span className="text-[#3b5fc2]">DRIVEN BY PROFESSIONALISM.</span>
+              Built On Trust. <br />
+              Driven By<br />
+              <span className="text-[#3b5fc2]">PROFESSIONALISM.</span>
             </h1>
             <p className="text-base sm:text-lg text-[#373737] max-w-xl leading-relaxed">
               Founded in 2016, Bosco Transport Inc. is an Ontario-based transportation and logistics company providing dependable freight transportation solutions across the province and the Greater Toronto Area.
@@ -32,9 +33,9 @@ export default function AboutPage() {
           {/* Right: Hero Image */}
           <div className="relative h-[300px] sm:h-[400px] lg:h-auto w-full">
             <div className="absolute inset-0 bg-gradient-to-r from-[#F6F7F8] via-[#F6F7F8]/50 to-transparent z-10 pointer-events-none" />
-            <Image 
-              src="/images/HeroimageAbout.webp" 
-              alt="Bosco Transport Fleet" 
+            <Image
+              src="/images/HeroimageAbout.webp"
+              alt="Bosco Transport Fleet"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -47,7 +48,7 @@ export default function AboutPage() {
       {/* Metrics Section */}
       <section className="bg-[#FEFEFE] border-b border-[#DDDEDF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-y lg:divide-y-0 lg:divide-x divide-[#DDDEDF] [&>div]:border-[#DDDEDF] md:[&>div:nth-child(n+4)]:border-t lg:[&>div:nth-child(n+4)]:border-t-0">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 divide-y md:divide-y-0 lg:divide-y-0 [&>div]:border-[#DDDEDF] [&>div:nth-child(n+3)]:border-t md:[&>div:nth-child(n+3)]:border-t-0 md:[&>div:nth-child(n+4)]:border-t lg:[&>div:nth-child(n+4)]:border-t-0">
             {/* Metric 1 */}
             <div className="flex flex-col items-center text-center p-6 xl:p-8">
               <Truck className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
@@ -55,45 +56,37 @@ export default function AboutPage() {
               <div className="text-sm font-bold text-[#3b5fc2] uppercase tracking-wider mb-1">YEARS</div>
               <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">OF EXPERIENCE</div>
             </div>
-            
-            {/* Metric 2 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l md:border-l-0 lg:border-l">
-              <Users className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
-              <div className="text-3xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">500+</div>
-              <div className="text-sm font-bold text-[#3b5fc2] uppercase tracking-wider mb-1">HAPPY</div>
-              <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">CLIENTS</div>
-            </div>
 
-            {/* Metric 3 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 md:border-l">
+            {/* Metric 2 */}
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l">
               <Route className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-xs text-[#050505] font-bold uppercase tracking-wide mb-1">ACROSS</div>
               <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">ONTARIO</div>
               <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">AND BEYOND</div>
             </div>
 
-            {/* Metric 4 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l md:border-l-0 lg:border-l">
+            {/* Metric 3 */}
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-t md:border-t-0 md:border-l">
               <ShieldCheck className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
-              <div className="text-3xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">100%</div>
-              <div className="text-sm font-bold text-[#3b5fc2] uppercase tracking-wider mb-1">SAFETY</div>
-              <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">FOCUSED</div>
+              <div className="text-2xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">SAFETY</div>
+              <div className="text-sm font-bold text-[#3b5fc2] uppercase tracking-wider mb-1">FIRST</div>
+              <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">APPROACH</div>
             </div>
 
-            {/* Metric 5 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 md:border-l">
+            {/* Metric 4 */}
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l md:border-l-0 lg:border-l border-t md:border-t lg:border-t-0">
               <Clock className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">ON-TIME</div>
               <div className="text-sm font-bold text-[#050505] uppercase tracking-wider mb-1">DELIVERY</div>
               <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">YOU CAN COUNT ON</div>
             </div>
 
-            {/* Metric 6 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l md:border-l-0 lg:border-l">
+            {/* Metric 5 */}
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-t md:border-t lg:border-t-0 md:border-l">
               <Settings className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
-              <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">MODERN</div>
-              <div className="text-sm font-bold text-[#050505] uppercase tracking-wider mb-1">FLEET</div>
-              <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">WELL MAINTAINED</div>
+              <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">MULTIPLE</div>
+              <div className="text-sm font-bold text-[#050505] uppercase tracking-wider mb-1">EQUIPMENT</div>
+              <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">OPTIONS</div>
             </div>
           </div>
         </div>

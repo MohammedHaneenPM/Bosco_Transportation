@@ -123,105 +123,145 @@ export default function HighValue() {
           </div>
 
           {/* Right Column: Signature Transit Route Illustration */}
-          <div className="lg:col-span-5 bg-[#F7F7F7] border border-[#DDDEDF] p-8 relative high-value-reveal rounded-3xl">
-            <div className="flex items-center justify-between mb-6 border-b border-[#DDDEDF] pb-4">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#3b5fc2] tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-[#3b5fc2] animate-ping" />
-                <span>Live Shipment Oversight</span>
+          <div className="lg:col-span-5 flex flex-col gap-6">
+            {/* Live Shipment Oversight Container */}
+            <div className="bg-[#F7F7F7] border border-[#DDDEDF] p-8 relative high-value-reveal rounded-3xl">
+              <div className="flex items-center justify-between mb-6 border-b border-[#DDDEDF] pb-4">
+                <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#3b5fc2] tracking-widest">
+                  <span className="w-2 h-2 rounded-full bg-[#3b5fc2] animate-ping" />
+                  <span>Live Shipment Oversight</span>
+                </div>
+                <span className="text-[10px] font-mono text-[#373737] uppercase">
+                  Ontario Transit Route
+                </span>
               </div>
-              <span className="text-[10px] font-mono text-[#373737] uppercase">
-                Ontario Transit Route
-              </span>
-            </div>
 
-            {/* Route Map Graphic */}
-            <div className="relative py-8 px-4 bg-[#FEFEFE] border border-[#DDDEDF] flex flex-col justify-center items-center rounded-2xl">
-              <div className="w-full max-w-[340px] relative">
-                {/* SVG Route Line */}
-                <svg
-                  viewBox="0 0 340 120"
-                  className="w-full h-auto overflow-visible"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Background Track Line */}
-                  <path
-                    d="M 30 90 Q 120 20 180 60 T 310 30"
-                    stroke="rgba(0, 0, 0, 0.15)"
-                    strokeWidth="3"
-                    strokeDasharray="4 4"
-                  />
-
-                  {/* Active Blue Glowing Track */}
-                  <path
-                    ref={pathRef}
-                    d="M 30 90 Q 120 20 180 60 T 310 30"
-                    stroke="#3b5fc2"
-                    strokeWidth="3"
-                    strokeDasharray="6 6"
-                  />
-
-                  {/* Pickup Node (Origin) */}
-                  <g transform="translate(30, 90)">
-                    <circle r="12" fill="#3b5fc2" fillOpacity="0.2" className="animate-ping" />
-                    <circle r="6" fill="#3b5fc2" />
-                    <circle r="3" fill="#FFFFFF" />
-                  </g>
-
-                  {/* Delivery Node (Destination) */}
-                  <g transform="translate(310, 30)">
-                    <circle r="12" fill="#3b5fc2" fillOpacity="0.2" className="animate-ping" />
-                    <circle r="6" fill="#3b5fc2" />
-                    <circle r="3" fill="#FFFFFF" />
-                  </g>
-
-                  {/* Animated Transit Truck */}
-                  <g ref={routeTruckRef}>
-                    <rect
-                      x="-14"
-                      y="-10"
-                      width="28"
-                      height="20"
-                      fill="#3b5fc2"
-                      rx="2"
+              {/* Route Map Graphic */}
+              <div className="relative py-8 px-4 bg-[#FEFEFE] border border-[#DDDEDF] flex flex-col justify-center items-center rounded-2xl">
+                <div className="w-full max-w-[340px] relative">
+                  {/* SVG Route Line */}
+                  <svg
+                    viewBox="0 0 340 120"
+                    className="w-full h-auto overflow-visible"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Background Track Line */}
+                    <path
+                      d="M 30 90 Q 120 20 180 60 T 310 30"
+                      stroke="rgba(0, 0, 0, 0.15)"
+                      strokeWidth="3"
+                      strokeDasharray="4 4"
                     />
-                    <circle cx="-6" cy="11" r="3" fill="#FFFFFF" />
-                    <circle cx="6" cy="11" r="3" fill="#FFFFFF" />
-                    <text
-                      x="0"
-                      y="3"
-                      fill="#FFFFFF"
-                      fontSize="7"
-                      fontFamily="monospace"
-                      fontWeight="bold"
-                      textAnchor="middle"
-                    >
-                      BOSCO
-                    </text>
-                  </g>
-                </svg>
 
-                {/* Node Labels */}
-                <div className="flex justify-between items-center mt-4 pt-2 border-t border-[#DDDEDF] text-xs font-mono">
-                  <div className="flex items-center gap-1.5 text-[#050505]">
-                    <MapPin className="w-3.5 h-3.5 text-[#3b5fc2]" />
-                    <span className="font-bold">PICKUP</span>
-                  </div>
-                  <div className="text-[10px] text-[#373737] uppercase tracking-wider text-center">
-                    Continuous Telematics
-                  </div>
-                  <div className="flex items-center gap-1.5 text-[#050505]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#3b5fc2]" />
-                    <span className="font-bold">DELIVERY</span>
+                    {/* Active Blue Glowing Track */}
+                    <path
+                      ref={pathRef}
+                      d="M 30 90 Q 120 20 180 60 T 310 30"
+                      stroke="#3b5fc2"
+                      strokeWidth="3"
+                      strokeDasharray="6 6"
+                    />
+
+                    {/* Pickup Node (Origin) */}
+                    <g transform="translate(30, 90)">
+                      <circle r="12" fill="#3b5fc2" fillOpacity="0.2" className="animate-ping" />
+                      <circle r="6" fill="#3b5fc2" />
+                      <circle r="3" fill="#FFFFFF" />
+                    </g>
+
+                    {/* Delivery Node (Destination) */}
+                    <g transform="translate(310, 30)">
+                      <circle r="12" fill="#3b5fc2" fillOpacity="0.2" className="animate-ping" />
+                      <circle r="6" fill="#3b5fc2" />
+                      <circle r="3" fill="#FFFFFF" />
+                    </g>
+
+                    {/* Animated Transit Truck */}
+                    <g ref={routeTruckRef}>
+                      <rect
+                        x="-14"
+                        y="-10"
+                        width="28"
+                        height="20"
+                        fill="#3b5fc2"
+                        rx="2"
+                      />
+                      <circle cx="-6" cy="11" r="3" fill="#FFFFFF" />
+                      <circle cx="6" cy="11" r="3" fill="#FFFFFF" />
+                      <text
+                        x="0"
+                        y="3"
+                        fill="#FFFFFF"
+                        fontSize="7"
+                        fontFamily="monospace"
+                        fontWeight="bold"
+                        textAnchor="middle"
+                      >
+                        BOSCO
+                      </text>
+                    </g>
+                  </svg>
+
+                  {/* Node Labels */}
+                  <div className="flex justify-between items-center mt-4 pt-2 border-t border-[#DDDEDF] text-xs font-mono">
+                    <div className="flex items-center gap-1.5 text-[#050505]">
+                      <MapPin className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                      <span className="font-bold">PICKUP</span>
+                    </div>
+                    <div className="text-[10px] text-[#373737] uppercase tracking-wider text-center">
+                      Continuous Telematics
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[#050505]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                      <span className="font-bold">DELIVERY</span>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* Note on Operational Experience */}
+              <p className="text-xs text-[#373737] leading-relaxed mt-6 font-mono">
+                Experience supporting electronics freight operations with careful cargo handling, shipment visibility and documented proof of delivery.
+              </p>
             </div>
 
-            {/* Note on Operational Experience */}
-            <p className="text-xs text-[#373737] leading-relaxed mt-4 font-mono">
-              Experience supporting electronics freight operations with strict seal compliance and verified proof-of-delivery protocols.
-            </p>
+          </div>
+        </div>
+
+        {/* Secure Transportation Approach - Full Width */}
+        <div className="mt-16 pl-6 sm:pl-8 relative group">
+          <div className="absolute top-0 left-0 w-1 h-full bg-[#3b5fc2]" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            {/* Title and Intro */}
+            <div className="lg:col-span-5">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-[#FEFEFE] border border-[#DDDEDF] flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-6 h-6 text-[#3b5fc2]" />
+                </div>
+                <h3 className="text-lg font-extrabold text-[#050505] font-grotesk tracking-widest uppercase leading-tight">
+                  Secure Transportation <br className="hidden sm:block" /> Approach
+                </h3>
+              </div>
+              <p className="text-[15px] text-[#373737] leading-relaxed">
+                For electronics and other high-value freight, Bosco Transport emphasizes cargo security, controlled handling and shipment visibility throughout the transportation process.
+              </p>
+            </div>
+            
+            {/* Details Columns */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="bg-[#FEFEFE] p-6 rounded-2xl border border-[#DDDEDF] shadow-sm">
+                <p className="text-sm text-[#373737] leading-relaxed">
+                  GPS and camera-monitored equipment provide an additional level of operational oversight, while live-tracking options allow customers to follow the progress of their shipments.
+                </p>
+              </div>
+              <div className="bg-[#FEFEFE] p-6 rounded-2xl border border-[#DDDEDF] shadow-sm">
+                <p className="text-sm text-[#373737] leading-relaxed">
+                  Our objective is to provide customers with confidence that their valuable freight is being transported with professional care, security and real-time visibility from origin to destination.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
