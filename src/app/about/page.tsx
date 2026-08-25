@@ -48,9 +48,9 @@ export default function AboutPage() {
       {/* Metrics Section */}
       <section className="bg-[#FEFEFE] border-b border-[#DDDEDF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 divide-y md:divide-y-0 lg:divide-y-0 [&>div]:border-[#DDDEDF] [&>div:nth-child(n+3)]:border-t md:[&>div:nth-child(n+3)]:border-t-0 md:[&>div:nth-child(n+4)]:border-t lg:[&>div:nth-child(n+4)]:border-t-0">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {/* Metric 1 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8">
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-b border-r border-[#DDDEDF] lg:border-b-0">
               <Truck className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-3xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">10+</div>
               <div className="text-sm font-bold text-[#3b5fc2] uppercase tracking-wider mb-1">YEARS</div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
             </div>
 
             {/* Metric 2 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l">
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-b border-[#DDDEDF] md:border-r lg:border-b-0">
               <Route className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-xs text-[#050505] font-bold uppercase tracking-wide mb-1">ACROSS</div>
               <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">ONTARIO</div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
             </div>
 
             {/* Metric 3 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-t md:border-t-0 md:border-l">
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-b border-r border-[#DDDEDF] md:border-r-0 md:border-b lg:border-r lg:border-b-0">
               <ShieldCheck className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-2xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">SAFETY</div>
               <div className="text-sm font-bold text-[#3b5fc2] uppercase tracking-wider mb-1">FIRST</div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
             </div>
 
             {/* Metric 4 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-l md:border-l-0 lg:border-l border-t md:border-t lg:border-t-0">
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-b border-[#DDDEDF] md:border-b-0 md:border-r lg:border-r">
               <Clock className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">ON-TIME</div>
               <div className="text-sm font-bold text-[#050505] uppercase tracking-wider mb-1">DELIVERY</div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
             </div>
 
             {/* Metric 5 */}
-            <div className="flex flex-col items-center text-center p-6 xl:p-8 border-t md:border-t lg:border-t-0 md:border-l">
+            <div className="flex flex-col items-center text-center p-6 xl:p-8 col-span-2 md:col-span-1 border-[#DDDEDF]">
               <Settings className="w-8 h-8 text-[#3b5fc2] mb-4" strokeWidth={1.5} />
               <div className="text-2xl font-extrabold text-[#3b5fc2] font-grotesk leading-none mb-1">MULTIPLE</div>
               <div className="text-sm font-bold text-[#050505] uppercase tracking-wider mb-1">EQUIPMENT</div>

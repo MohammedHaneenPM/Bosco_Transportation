@@ -81,8 +81,16 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div ref={badgeRef} className="opacity-0">
-            <SectionLabel>RELIABLE • SAFE • FLEXIBLE • PROFESSIONAL • COST-EFFECTIVE</SectionLabel>
+          <div ref={badgeRef} className="opacity-0 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono tracking-widest uppercase font-semibold text-[#3b5fc2] mb-4">
+            <span>RELIABLE</span>
+            <span className="font-bold">•</span>
+            <span>SAFE</span>
+            <span className="font-bold">•</span>
+            <span>FLEXIBLE</span>
+            <span className="font-bold">•</span>
+            <span>PROFESSIONAL</span>
+            <span className="font-bold">•</span>
+            <span>COST-EFFECTIVE</span>
           </div>
 
           {/* Heading */}

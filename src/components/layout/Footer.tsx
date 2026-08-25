@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY } from "@/data/company";
 import { ArrowUpRight, Shield, Clock, MapPin, Truck } from "lucide-react";
 import ParticleText from "@/components/ui/ParticleText";
@@ -12,15 +13,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
-            <div className="flex flex-col">
-              <span className="text-2xl font-extrabold tracking-tighter text-[#050505] font-grotesk flex items-center gap-1">
-                BOSCO
-                <span className="w-2 h-2 bg-[#3b5fc2] inline-block"></span>
-              </span>
-              <span className="text-[10px] font-mono tracking-[0.25em] text-[#373737] uppercase -mt-0.5">
-                TRANSPORT INC.
-              </span>
-            </div>
+            <Link href="/" className="inline-block relative w-36 h-10 mb-2">
+              <Image
+                src="/bosco.svg"
+                alt="Bosco Transport Inc."
+                fill
+                className="object-contain object-left"
+              />
+            </Link>
             <p className="text-xs leading-relaxed text-[#373737]">
               Ontario-based transportation and logistics company providing dependable freight transportation solutions across Ontario and the Greater Toronto Area since 2016.
             </p>

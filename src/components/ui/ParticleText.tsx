@@ -32,7 +32,7 @@ export default function ParticleText({
     let particles: Particle[] = [];
     let animationFrameId: number;
 
-    const colors = ["#3b5fc2", "#050505", "#6A6A6A", "#DDDEDF"];
+    const colors = ["#3b5fc2", "#050505", "#373737", "#1e3a8a"];
 
     const init = () => {
       // Set canvas size to match container
@@ -57,7 +57,7 @@ export default function ParticleText({
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles = [];
-      const step = 6; // Downsample for performance (gap between particles)
+      const step = 5; // Downsample for performance (gap between particles)
 
       for (let y = 0; y < textCoordinates.height; y += step) {
         for (let x = 0; x < textCoordinates.width; x += step) {
@@ -119,7 +119,7 @@ export default function ParticleText({
         // Draw particle
         ctx.fillStyle = p.color;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
         ctx.closePath();
         ctx.fill();
       }
@@ -178,7 +178,7 @@ export default function ParticleText({
     <div className="w-full h-[300px] relative overflow-hidden flex items-center justify-center pointer-events-auto cursor-crosshair group">
        <canvas 
         ref={canvasRef} 
-        className="block opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
+        className="block opacity-100 transition-opacity duration-500" 
       />
     </div>
   );
