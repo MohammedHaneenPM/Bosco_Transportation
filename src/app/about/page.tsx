@@ -4,29 +4,10 @@ import Image from "next/image";
 import { ArrowRight, ShieldCheck, Target, Eye, Award, CheckCircle2, Truck, Users, Route, Clock, Settings } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { COMPANY } from "@/data/company";
-import { getBreadcrumbStructuredData } from "@/lib/seo";
-
-export const metadata: Metadata = {
-  title: "About Bosco Transport Inc. | Ontario Transportation Company",
-  description:
-    "Founded in 2016, Bosco Transport Inc. is an Ontario-based freight transportation and logistics company providing dependable FTL, LTL, dedicated, and specialized services.",
-  alternates: {
-    canonical: "/about",
-  },
-};
 
 export default function AboutPage() {
-  const breadcrumbData = getBreadcrumbStructuredData([
-    { name: "Home", url: "/" },
-    { name: "About Bosco", url: "/about" },
-  ]);
-
   return (
     <main className="flex-1 pt-24 bg-[#F6F7F8]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
-      />
       {/* About Hero Section */}
       <section className="relative overflow-hidden border-b border-[#DDDEDF]">
         <div className="grid grid-cols-1 lg:grid-cols-2">
