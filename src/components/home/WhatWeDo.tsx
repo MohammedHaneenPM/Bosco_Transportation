@@ -81,10 +81,10 @@ export default function WhatWeDo() {
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] hover:border-[#3b5fc2] text-xs font-mono uppercase tracking-wider transition-all duration-200 group rounded-full"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] hover:border-[#BF0505] text-xs font-mono uppercase tracking-wider transition-all duration-200 group rounded-full"
             >
               <span>VIEW ALL SERVICES</span>
-              <ArrowRight className="w-4 h-4 text-[#3b5fc2] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 text-[#BF0505] transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
@@ -98,7 +98,7 @@ export default function WhatWeDo() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between group hover:border-[#3b5fc2]/60 hover:bg-[#FEFEFE] transition-all duration-300 relative rounded-2xl"
+                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between group hover:border-[#BF0505]/60 hover:bg-[#FEFEFE] transition-all duration-300 relative rounded-2xl"
                 >
                   <div>
                     {/* Top Row: Number & Icon */}
@@ -106,13 +106,13 @@ export default function WhatWeDo() {
                       <span className="text-[10px] sm:text-xs font-mono text-[#373737] group-hover:text-[#050505] transition-colors">
                         {service.number}
                       </span>
-                      <div className="text-[#3b5fc2] group-hover:scale-110 transition-transform">
+                      <div className="text-[#BF0505] group-hover:scale-110 transition-transform">
                         <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-[12px] min-[375px]:text-sm sm:text-base font-bold text-[#050505] font-grotesk uppercase tracking-normal min-[375px]:tracking-wide mb-2 group-hover:text-[#3b5fc2] transition-colors break-words hyphens-auto">
+                    <h3 className="text-[12px] min-[375px]:text-sm sm:text-base font-bold text-[#050505] font-grotesk uppercase tracking-normal min-[375px]:tracking-wide mb-2 group-hover:text-[#BF0505] transition-colors break-words hyphens-auto">
                       {service.title}
                     </h3>
 
@@ -125,7 +125,7 @@ export default function WhatWeDo() {
                   {/* Arrow Link */}
                   <Link
                     href={`/services#${service.id}`}
-                    className="inline-flex items-center text-xs font-mono text-[#373737] group-hover:text-[#3b5fc2] transition-colors gap-1 pt-2 border-t border-[#DDDEDF]"
+                    className="inline-flex items-center text-xs font-mono text-[#373737] group-hover:text-[#BF0505] transition-colors gap-1 pt-2 border-t border-[#DDDEDF]"
                   >
                     <span>Details</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

@@ -59,7 +59,7 @@ export default function ServicesPage() {
             </div>
             <h1 className="text-5xl lg:text-7xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-6">
               Our <br />
-              <span className="text-[#3b5fc2] uppercase">SERVICES.</span>
+              <span className="text-[#BF0505] uppercase">SERVICES.</span>
             </h1>
             <p className="text-base sm:text-lg text-[#373737] leading-relaxed max-w-md">
               Reliable, safe and cost-effective transportation solutions across Ontario and the GTA. From full truckload to specialized freight, we deliver with professionalism you can count on.
@@ -85,7 +85,7 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3b5fc2]"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#BF0505]"></span>
               <span className="text-xs font-mono font-bold text-[#050505] uppercase tracking-widest">
                 CORE SERVICES
               </span>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                         {service.number}
                       </span>
                       <div className="w-12 h-12 bg-[#FEFEFE] border border-[#DDDEDF] flex items-center justify-center shrink-0 shadow-sm rounded-full">
-                        <Icon className="w-6 h-6 text-[#3b5fc2]" strokeWidth={1.5} />
+                        <Icon className="w-6 h-6 text-[#BF0505]" strokeWidth={1.5} />
                       </div>
                     </div>
 
@@ -149,7 +149,7 @@ export default function ServicesPage() {
                       </h4>
                       {service.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-[#3b5fc2] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-5 h-5 text-[#BF0505] shrink-0 mt-0.5" />
                           <span className="text-sm text-[#373737] leading-relaxed">{highlight}</span>
                         </div>
                       ))}
@@ -171,7 +171,7 @@ export default function ServicesPage() {
             <div className="lg:col-span-4 flex flex-col items-start relative">
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3b5fc2]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#BF0505]"></span>
                   <span className="text-xs font-mono font-bold text-[#050505] uppercase tracking-widest">
                     ADDITIONAL SERVICES
                   </span>
@@ -229,8 +229,8 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#FEFEFE] border border-[#DDDEDF] p-8 lg:p-12 shadow-sm rounded-3xl">
             <div className="flex items-center gap-6">
-              <div className="hidden sm:flex w-16 h-16 rounded-full bg-[#3b5fc2]/10 items-center justify-center border border-[#3b5fc2]/20 shrink-0">
-                <ShieldCheck className="w-8 h-8 text-[#3b5fc2] stroke-[1.5]" />
+              <div className="hidden sm:flex w-16 h-16 rounded-full bg-[#FFF3F3] items-center justify-center border border-[#BF0505]/20 shrink-0">
+                <ShieldCheck className="w-8 h-8 text-[#BF0505] stroke-[1.5]" />
               </div>
               <div>
                 <h3 className="text-xl lg:text-2xl font-extrabold text-[#050505] font-grotesk mb-2">
@@ -244,7 +244,7 @@ export default function ServicesPage() {
 
             <Link
               href="/#quote"
-              className="shrink-0 inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase font-bold tracking-widest transition-colors w-full md:w-auto rounded-full"
+              className="shrink-0 inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#BF0505] hover:bg-[#C5161D] text-white text-xs font-mono uppercase font-bold tracking-widest transition-colors w-full md:w-auto rounded-full"
             >
               REQUEST A QUOTE
               <ArrowRight className="w-4 h-4" />

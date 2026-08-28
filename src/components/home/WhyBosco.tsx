@@ -103,7 +103,7 @@ export default function WhyBosco() {
             </p>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#3b5fc2] hover:bg-[#2a458f] text-white text-xs font-mono uppercase tracking-wider transition-colors group rounded-full"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#BF0505] hover:bg-[#C5161D] text-white text-xs font-mono uppercase tracking-wider transition-colors group rounded-full"
             >
               <span>LEARN MORE ABOUT US</span>
               <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
@@ -113,7 +113,7 @@ export default function WhyBosco() {
             <div className="mt-10 pt-8 border-t border-[#DDDEDF] space-y-2.5">
               {highlights.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2.5 text-xs text-[#373737] font-mono">
-                  <div className="w-4 h-4 rounded-none bg-[#3b5fc2] text-white flex items-center justify-center shrink-0">
+                  <div className="w-4 h-4 rounded-none bg-[#BF0505] text-white flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3" />
                   </div>
                   <span>{item}</span>
@@ -132,10 +132,10 @@ export default function WhyBosco() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#FEFEFE] p-4 sm:p-6 lg:p-8 border border-[#DDDEDF] hover:border-[#3b5fc2] shadow-sm transition-all duration-300 flex flex-col justify-between rounded-2xl"
+                  className="bg-[#FEFEFE] p-4 sm:p-6 lg:p-8 border border-[#DDDEDF] hover:border-[#BF0505] shadow-sm transition-all duration-300 flex flex-col justify-between rounded-2xl"
                 >
                   <div>
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-4 sm:mb-6 rounded-full">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#BF0505] flex items-center justify-center mb-4 sm:mb-6 rounded-full">
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <h3 className="text-sm sm:text-base font-bold text-[#050505] font-grotesk tracking-wide uppercase mb-2 sm:mb-3">

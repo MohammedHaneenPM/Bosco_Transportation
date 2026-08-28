@@ -32,7 +32,7 @@ export default function ParticleText({
     let particles: Particle[] = [];
     let animationFrameId: number;
 
-    const colors = ["#3b5fc2", "#050505", "#373737", "#1e3a8a"];
+    const colors = ["#BF0505", "#050505", "#373737", "#7F0D12"];
 
     const init = () => {
       // Set canvas size to match container
@@ -51,6 +51,8 @@ export default function ParticleText({
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+      if (canvas.width === 0 || canvas.height === 0) return;
 
       // Get pixel data
       const textCoordinates = ctx.getImageData(0, 0, canvas.width, canvas.height);

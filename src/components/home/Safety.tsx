@@ -92,7 +92,7 @@ export default function Safety() {
           <SectionLabel>SAFETY & COMPLIANCE</SectionLabel>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#050505] font-grotesk tracking-tight leading-[1.1] mb-4">
             SAFETY IS PART OF <br />
-            <span className="text-[#3b5fc2]">EVERY LOAD.</span>
+            <span className="text-[#BF0505]">EVERY LOAD.</span>
           </h2>
           <p className="text-sm sm:text-base text-[#373737] leading-relaxed">
             At Bosco Transport, safety and regulatory compliance are integral to every shipment. We uphold strict maintenance, inspection, and cargo protection procedures across all operations.
@@ -109,10 +109,10 @@ export default function Safety() {
                 ref={(el) => {
                   itemsRef.current[index] = el;
                 }}
-                className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between hover:border-[#3b5fc2]/50 transition-colors group rounded-2xl"
+                className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between hover:border-[#BF0505]/50 transition-colors group rounded-2xl"
               >
                 <div>
-                  <div className="w-10 h-10 bg-[#EDEDED] border border-[#DDDEDF] text-[#3b5fc2] flex items-center justify-center mb-5 group-hover:bg-[#3b5fc2] group-hover:text-white transition-colors rounded-full">
+                  <div className="w-10 h-10 bg-[#EDEDED] border border-[#DDDEDF] text-[#BF0505] flex items-center justify-center mb-5 group-hover:bg-[#BF0505] group-hover:text-white transition-colors rounded-full">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-sm font-bold text-[#050505] font-grotesk uppercase tracking-wide mb-2">
@@ -125,7 +125,7 @@ export default function Safety() {
 
                 <div className="pt-4 mt-6 border-t border-[#DDDEDF] flex items-center justify-between text-[10px] font-mono text-[#6A6A6A]">
                   <span>STANDARD #0{index + 1}</span>
-                  <span className="text-[#3b5fc2]">ACTIVE</span>
+                  <span className="text-[#BF0505]">ACTIVE</span>
                 </div>
               </div>
             );

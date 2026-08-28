@@ -13,10 +13,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block relative w-36 h-10 mb-2">
+            <Link href="/" className="inline-block relative w-52 h-14 mb-2">
               <Image
-                src="/bosco.svg"
-                alt="Bosco Transport Inc."
+                src="/Group 4.png"
+                alt="Bosco Transport Inc. Logo"
                 fill
                 className="object-contain object-left"
               />
@@ -25,8 +25,17 @@ export default function Footer() {
               Ontario-based transportation and logistics company providing dependable freight transportation solutions across Ontario and the Greater Toronto Area since 2016.
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#373737]">
-              <MapPin className="w-4 h-4 text-[#3b5fc2]" />
+              <MapPin className="w-4 h-4 text-[#BF0505]" />
               <span>Ontario, Canada</span>
+            </div>
+            <div className="pt-4">
+              <Image
+                src="/Proudly Canadian.png"
+                alt="Proudly Canadian"
+                width={160}
+                height={160}
+                className="object-contain"
+              />
             </div>
           </div>
 
@@ -41,7 +50,7 @@ export default function Footer() {
                   href="/"
                   className="hover:text-[#050505] transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#3b5fc2]">›</span> Home
+                  <span className="text-[#BF0505]">›</span> Home
                 </Link>
               </li>
               <li>
@@ -49,7 +58,7 @@ export default function Footer() {
                   href="/about"
                   className="hover:text-[#050505] transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#3b5fc2]">›</span> About Bosco
+                  <span className="text-[#BF0505]">›</span> About Bosco
                 </Link>
               </li>
               <li>
@@ -57,7 +66,7 @@ export default function Footer() {
                   href="/services"
                   className="hover:text-[#050505] transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#3b5fc2]">›</span> Services & Capabilities
+                  <span className="text-[#BF0505]">›</span> Services & Capabilities
                 </Link>
               </li>
               <li>
@@ -65,7 +74,7 @@ export default function Footer() {
                   href="/#quote"
                   className="hover:text-[#050505] transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#3b5fc2]">›</span> Request a Quote
+                  <span className="text-[#BF0505]">›</span> Request a Quote
                 </Link>
               </li>
             </ul>
@@ -78,23 +87,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-[#373737]">
               <li className="flex items-center gap-2">
-                <Truck className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                <Truck className="w-3.5 h-3.5 text-[#BF0505]" />
                 <span>Full Truckload (FTL)</span>
               </li>
               <li className="flex items-center gap-2">
-                <Truck className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                <Truck className="w-3.5 h-3.5 text-[#BF0505]" />
                 <span>Less-Than-Truckload (LTL)</span>
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                <Clock className="w-3.5 h-3.5 text-[#BF0505]" />
                 <span>GTA & City Deliveries</span>
               </li>
               <li className="flex items-center gap-2">
-                <Shield className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                <Shield className="w-3.5 h-3.5 text-[#BF0505]" />
                 <span>High-Value & Electronics Freight</span>
               </li>
               <li className="flex items-center gap-2">
-                <Truck className="w-3.5 h-3.5 text-[#3b5fc2]" />
+                <Truck className="w-3.5 h-3.5 text-[#BF0505]" />
                 <span>Dedicated Transportation</span>
               </li>
             </ul>

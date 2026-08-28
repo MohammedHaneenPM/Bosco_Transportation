@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
       </head>
       <body
-        className={`${openSans.className} ${openSans.variable} min-h-screen bg-[#F6F7F8] text-[#050505] flex flex-col antialiased selection:bg-[#3b5fc2] selection:text-white`}
+        className={`${openSans.className} ${openSans.variable} min-h-screen bg-[#F6F7F8] text-[#050505] flex flex-col antialiased selection:bg-[#BF0505] selection:text-white`}
         suppressHydrationWarning
       >
         <LenisProvider>

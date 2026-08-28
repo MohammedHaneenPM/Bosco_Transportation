@@ -81,7 +81,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div ref={badgeRef} className="opacity-0 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono tracking-widest uppercase font-semibold text-[#3b5fc2] mb-4">
+          <div ref={badgeRef} className="opacity-0 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono tracking-widest uppercase font-semibold text-[#BF0505] mb-4">
             <span>RELIABLE</span>
             <span className="font-bold">•</span>
             <span>SAFE</span>
@@ -100,7 +100,7 @@ export default function Hero() {
           >
             Transportation <br />
             You Can <br />
-            <span className="text-[#3b5fc2] drop-shadow-[0_0_25px_rgba(59,95,194,0.4)]">
+            <span className="text-[#BF0505] drop-shadow-[0_0_25px_rgba(191,5,5,0.4)]">
               COUNT ON.
             </span>
           </h1>
@@ -120,7 +120,7 @@ export default function Hero() {
           >
             <button
               onClick={openQuoteModal}
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-4 bg-[#3b5fc2] hover:bg-[#2a458f] text-white font-mono uppercase tracking-wider text-xs font-bold transition-all shadow-[0_0_25px_rgba(59,95,194,0.3)] hover:shadow-[0_0_35px_rgba(59,95,194,0.5)] group rounded-full"
+              className="inline-flex items-center justify-center gap-2.5 px-7 py-4 bg-[#BF0505] hover:bg-[#C5161D] text-white font-mono uppercase tracking-wider text-xs font-bold transition-all shadow-[0_0_25px_rgba(191,5,5,0.3)] hover:shadow-[0_0_35px_rgba(191,5,5,0.5)] group rounded-full"
             >
               <span>REQUEST A QUOTE</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

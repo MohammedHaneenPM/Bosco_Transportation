@@ -15,13 +15,13 @@ export default function SectionLabel({
     <div
       className={cn(
         "inline-flex items-center gap-1.5 text-xs font-mono tracking-widest uppercase font-semibold mb-3",
-        "text-[#3b5fc2]",
+        "text-[#BF0505]",
         className
       )}
     >
-      <span className="text-[#3b5fc2] font-bold">•</span>
+      <span className="text-[#BF0505] font-bold">•</span>
       <span>{children}</span>
-      <span className="text-[#3b5fc2] font-bold">•</span>
+      <span className="text-[#BF0505] font-bold">•</span>
     </div>
   );
 }

@@ -63,8 +63,8 @@ export default function CustomCursor() {
         gsap.to(cursor, { scale: 0, opacity: 0, duration: 0.2 });
         gsap.to(follower, { 
           scale: 1.5, 
-          borderColor: "rgba(59, 95, 194, 1)", 
-          backgroundColor: "rgba(59, 95, 194, 0.1)", 
+          borderColor: "rgba(191, 5, 5, 1)", 
+          backgroundColor: "rgba(191, 5, 5, 0.1)", 
           duration: 0.2 
         });
       }
@@ -77,7 +77,7 @@ export default function CustomCursor() {
         gsap.to(cursor, { scale: 1, opacity: 1, duration: 0.2 });
         gsap.to(follower, { 
           scale: 1, 
-          borderColor: "rgba(59, 95, 194, 0.4)", 
+          borderColor: "rgba(191, 5, 5, 0.4)", 
           backgroundColor: "transparent", 
           duration: 0.2 
         });
@@ -101,13 +101,13 @@ export default function CustomCursor() {
       {/* Inner Dot */}
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-2 h-2 bg-[#3b5fc2] rounded-full pointer-events-none z-[9999] hidden md:block"
+        className="fixed top-0 left-0 w-2 h-2 bg-[#BF0505] rounded-full pointer-events-none z-[9999] hidden md:block"
         style={{ willChange: "transform" }}
       />
       {/* Trailing Outer Ring */}
       <div
         ref={followerRef}
-        className="fixed top-0 left-0 w-10 h-10 border border-[#3b5fc2]/40 rounded-full pointer-events-none z-[9998] hidden md:block transition-colors"
+        className="fixed top-0 left-0 w-10 h-10 border border-[#BF0505]/40 rounded-full pointer-events-none z-[9998] hidden md:block transition-colors"
         style={{ willChange: "transform" }}
       />
     </>

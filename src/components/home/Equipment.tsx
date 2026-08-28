@@ -116,14 +116,14 @@ export default function Equipment() {
                 className="inline-flex items-center gap-2 px-5 py-3 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] text-xs font-mono uppercase tracking-wider transition-colors group rounded-full"
               >
                 <span>VIEW ALL SERVICES</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#3b5fc2] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#BF0505] transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
           {/* Global Progress Bar */}
           <div className="h-1 w-full bg-[#DDDEDF] overflow-hidden relative mb-10">
-            <div ref={progressRef} className="equipment-progress absolute inset-0 bg-[#3b5fc2] origin-left scale-x-0" />
+            <div ref={progressRef} className="equipment-progress absolute inset-0 bg-[#BF0505] origin-left scale-x-0" />
           </div>
         </div>
 
@@ -136,7 +136,7 @@ export default function Equipment() {
             {FLEET_EQUIPMENT.map((item, index) => (
               <div
                 key={item.id}
-                className="w-[300px] sm:w-[360px] md:w-[400px] bg-[#F7F7F7] border border-[#DDDEDF] flex flex-col justify-between group hover:border-[#3b5fc2]/50 transition-all duration-300 shrink-0 rounded-3xl overflow-hidden"
+                className="w-[300px] sm:w-[360px] md:w-[400px] bg-[#F7F7F7] border border-[#DDDEDF] flex flex-col justify-between group hover:border-[#BF0505]/50 transition-all duration-300 shrink-0 rounded-3xl overflow-hidden"
               >
                 {/* Card Visual / Header */}
                 <div className="aspect-[4/3] p-6 border-b border-[#DDDEDF] relative overflow-hidden flex flex-col justify-between group">
@@ -150,7 +150,7 @@ export default function Equipment() {
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#F7F7F7] via-[#F7F7F7]/40 to-transparent pointer-events-none z-0" />
 
                   <div className="relative z-10 flex items-start justify-between">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-white px-2 py-1 bg-[#3b5fc2]">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-white px-2 py-1 bg-[#BF0505]">
                       {item.category}
                     </span>
                     <div className="w-8 h-8 bg-[#FEFEFE] rounded-full flex items-center justify-center shadow-sm">
@@ -183,7 +183,7 @@ export default function Equipment() {
                           key={fIndex}
                           className="text-[11px] text-[#373737] flex items-center gap-2 font-mono"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#3b5fc2]" />
+                          <span className="w-1.5 h-1.5 bg-[#BF0505]" />
                           <span>{feat}</span>
                         </li>
                       ))}

@@ -83,7 +83,7 @@ export default function Metrics() {
                 }}
                 className={`py-6 px-3 sm:py-8 sm:px-6 flex flex-col xl:flex-row items-center sm:items-start xl:items-center text-center sm:text-left gap-3 sm:gap-5 hover:bg-black/[0.02] transition-colors ${borderClasses}`}
               >
-                <div className="p-2 sm:p-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#3b5fc2] shrink-0 rounded-xl">
+                <div className="p-2 sm:p-3 bg-[#F7F7F7] border border-[#DDDEDF] text-[#BF0505] shrink-0 rounded-xl">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="min-w-0">

@@ -42,7 +42,7 @@ export default function QuoteCTA() {
           className="bg-[#F7F7F7] border border-[#DDDEDF] p-8 sm:p-12 mb-16 relative overflow-hidden rounded-3xl"
         >
           {/* Subtle Blue Glow */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#3b5fc2]/10 blur-[90px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#BF0505]/10 blur-[90px] pointer-events-none" />
 
           <div className="relative z-10 flex flex-col items-center text-center">
             <SectionLabel>START YOUR SHIPMENT</SectionLabel>
@@ -59,7 +59,7 @@ export default function QuoteCTA() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-4 space-y-6">
             <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-4 rounded-2xl">
-              <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#3b5fc2] tracking-widest">
+              <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#BF0505] tracking-widest">
                 <ShieldAlert className="w-4 h-4" />
                 <span>Ontario Dispatch Center</span>
               </div>
@@ -73,7 +73,7 @@ export default function QuoteCTA() {
 
             <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-3 font-mono text-xs text-[#373737] rounded-2xl">
               <div className="flex items-center gap-3 text-[#050505]">
-                <Mail className="w-4 h-4 text-[#3b5fc2]" />
+                <Mail className="w-4 h-4 text-[#BF0505]" />
                 <span>dispatch@boscotransport.ca</span>
               </div>
               <div className="text-[11px] text-[#6A6A6A] pt-2 border-t border-[#DDDEDF]">
