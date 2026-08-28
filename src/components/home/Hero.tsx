@@ -73,7 +73,7 @@ export default function Hero() {
           alt="Bosco Transport Commercial Highway Truck in Ontario Canada"
           fill
           priority
-          className="object-cover object-center md:object-right filter brightness-[0.75] contrast-[1.05]"
+          className="object-cover object-[60%_center] md:object-right filter brightness-[0.75] contrast-[1.05]"
           sizes="100vw"
         />
       </div>
