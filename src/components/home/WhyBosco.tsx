@@ -75,7 +75,7 @@ export default function WhyBosco() {
   ];
 
   const highlights = [
-    "Established transportation experience since 2016",
+    "Established transportation experience since 2010",
     "Strong Ontario and GTA operating experience",
     "FTL and LTL carrier capabilities",
     "Local and dedicated transportation programs",
@@ -132,7 +132,7 @@ export default function WhyBosco() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#FEFEFE] p-4 sm:p-6 lg:p-8 border border-[#DDDEDF] hover:border-[#BF0505] shadow-sm transition-all duration-300 flex flex-col justify-between rounded-2xl"
+                  className="bg-[#FEFEFE] p-4 sm:p-6 lg:p-8 border border-[#DDDEDF] hover-gradient-border border-transparent shadow-sm transition-all duration-300 flex flex-col justify-between rounded-2xl"
                 >
                   <div>
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#EDEDED] border border-[#DDDEDF] text-[#BF0505] flex items-center justify-center mb-4 sm:mb-6 rounded-full">

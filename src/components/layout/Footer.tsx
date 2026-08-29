@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#FEFEFE] border-t border-[#DDDEDF] text-[#373737] font-sans">
+    <footer id="contact" className="bg-[#FEFEFE] border-t border-[#DDDEDF] text-[#373737] font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Col 1: Brand Info */}
@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-xs leading-relaxed text-[#373737]">
-              Ontario-based transportation and logistics company providing dependable freight transportation solutions across Ontario and the Greater Toronto Area since 2016.
+              Ontario-based transportation and logistics company providing dependable freight transportation solutions across Ontario and the Greater Toronto Area since 2010.
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#373737]">
               <MapPin className="w-4 h-4 text-[#BF0505]" />

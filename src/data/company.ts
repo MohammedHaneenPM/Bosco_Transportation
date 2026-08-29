@@ -2,7 +2,7 @@ export const COMPANY = {
   name: "BOSCO TRANSPORT INC.",
   legalName: "Bosco Transport Inc.",
   tagline: "Reliable • Safe • Flexible • Professional • Cost-Effective",
-  foundedYear: "2016",
+  foundedYear: "2010",
   region: "Ontario, Canada",
   coverage: "Ontario & GTA Transportation",
   phone: "+1 (416) 000-0000", // placeholder format pending client phone update

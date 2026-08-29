@@ -131,3 +131,39 @@ html.lenis, html.lenis body {
 .animate-pulse-subtle {
   animation: pulse-subtle 3s ease-in-out infinite;
 }
+
+@layer utilities {
+  .hover-gradient-border {
+    position: relative;
+    border-color: transparent !important;
+  }
+  .hover-gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #bf0505, #b65300, #db7207, #d4a206, #d7d80d);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .hover-gradient-border:hover {
+    border-color: transparent !important;
+  }
+  .hover-gradient-border:hover::before {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

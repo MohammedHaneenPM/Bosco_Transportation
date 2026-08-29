@@ -20,7 +20,7 @@ export default function AboutPage() {
               <span className="text-[#BF0505]">PROFESSIONALISM.</span>
             </h1>
             <p className="text-base sm:text-lg text-[#373737] max-w-xl leading-relaxed">
-              Founded in 2016, Bosco Transport Inc. is an Ontario-based transportation and logistics company providing dependable freight transportation solutions across the province and the Greater Toronto Area.
+              Founded in 2010, Bosco Transport Inc. is an Ontario-based transportation and logistics company providing dependable freight transportation solutions across the province and the Greater Toronto Area.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
             {/* Metric 1 */}
             <div className="flex flex-col items-center text-center p-6 xl:p-8 border-b border-r border-[#DDDEDF] lg:border-b-0">
               <Truck className="w-8 h-8 text-[#BF0505] mb-4" strokeWidth={1.5} />
-              <div className="text-3xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">10+</div>
+              <div className="text-3xl font-extrabold text-[#050505] font-grotesk leading-none mb-1">15+</div>
               <div className="text-sm font-bold text-[#BF0505] uppercase tracking-wider mb-1">YEARS</div>
               <div className="text-[10px] text-[#373737] font-mono uppercase tracking-wide">OF EXPERIENCE</div>
             </div>
@@ -114,11 +114,11 @@ export default function AboutPage() {
                 We understand the absolute importance of appointment compliance, accurate paperwork, responsive dispatch communication, prompt proof of delivery (POD), cargo security, and professional customer-site procedures.
               </p>
 
-              {/* 2016 / Today Badge Grid */}
+              {/* 2010 / Today Badge Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
                 <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] rounded-2xl">
                   <span className="text-2xl font-extrabold text-[#BF0505] font-grotesk block mb-1">
-                    2016
+                    2010
                   </span>
                   <span className="text-xs font-mono uppercase tracking-widest text-[#050505] font-bold block mb-1">
                     ESTABLISHED

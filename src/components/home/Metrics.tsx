@@ -35,7 +35,7 @@ export default function Metrics() {
 
   const metrics = [
     {
-      value: "2016",
+      value: "2010",
       label: "ESTABLISHED",
       icon: Calendar,
       desc: "Founded in Ontario",

@@ -64,25 +64,6 @@ export default function Equipment() {
             }
           });
         });
-
-        // Mobile / Tablet
-        mm.add("(max-width: 1023px)", () => {
-          const tween = gsap.to(track, { x: getScrollAmount, ease: "none" });
-          ScrollTrigger.create({
-            trigger: containerRef.current,
-            start: "bottom bottom",
-            end: () => `+=${Math.abs(getScrollAmount())}`,
-            pin: true,
-            animation: tween,
-            scrub: true,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-              if (progressRef.current) {
-                gsap.to(progressRef.current, { scaleX: self.progress, duration: 0.1, ease: "none", transformOrigin: "left center" });
-              }
-            }
-          });
-        });
       }
     }, containerRef);
 
@@ -122,21 +103,21 @@ export default function Equipment() {
           </div>
 
           {/* Global Progress Bar */}
-          <div className="h-1 w-full bg-[#DDDEDF] overflow-hidden relative mb-10">
+          <div className="hidden lg:block h-1 w-full bg-[#DDDEDF] overflow-hidden relative mb-10">
             <div ref={progressRef} className="equipment-progress absolute inset-0 bg-[#BF0505] origin-left scale-x-0" />
           </div>
         </div>
 
-        <div className="w-full relative">
-          {/* Horizontal Scroll Track */}
+        <div className="w-full relative overflow-x-auto lg:overflow-visible flex snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          {/* Horizontal Native Scroll (Mobile) / GSAP Scroll Track (Desktop) */}
           <div
             ref={scrollTrackRef}
-            className="flex gap-6 w-max"
+            className="flex gap-4 sm:gap-6 w-max pb-4 lg:pb-0"
           >
             {FLEET_EQUIPMENT.map((item, index) => (
               <div
                 key={item.id}
-                className="w-[300px] sm:w-[360px] md:w-[400px] bg-[#F7F7F7] border border-[#DDDEDF] flex flex-col justify-between group hover:border-[#BF0505]/50 transition-all duration-300 shrink-0 rounded-3xl overflow-hidden"
+                className="snap-start w-[280px] sm:w-[360px] md:w-[400px] bg-[#F7F7F7] border border-[#DDDEDF] flex flex-col justify-between group hover-gradient-border border-transparent transition-all duration-300 shrink-0 rounded-3xl overflow-hidden"
               >
                 {/* Card Visual / Header */}
                 <div className="aspect-[4/3] p-6 border-b border-[#DDDEDF] relative overflow-hidden flex flex-col justify-between group">

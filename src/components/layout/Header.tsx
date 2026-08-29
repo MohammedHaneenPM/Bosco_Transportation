@@ -24,6 +24,7 @@ export default function Header() {
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
     { name: "SERVICES", href: "/services" },
+    { name: "CONTACT US", href: "/#contact" },
   ];
 
   return (
@@ -56,22 +57,28 @@ export default function Header() {
                 ? false
                 : pathname.startsWith(link.href);
 
+            const isContact = link.name === "CONTACT US";
+
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-xs font-mono tracking-widest uppercase transition-colors duration-200 relative py-1 group ${
-                  isActive
-                    ? "text-[#BF0505] font-bold"
-                    : "text-[#6A6A6A] hover:text-[#BF0505]"
+                className={`text-xs font-mono tracking-widest uppercase transition-colors duration-200 relative group ${
+                  isContact
+                    ? "text-[#BF0505] font-bold bg-[#BF0505]/10 px-4 py-2 rounded-full hover:bg-[#BF0505]/20"
+                    : isActive
+                    ? "text-[#BF0505] font-bold py-1"
+                    : "text-[#6A6A6A] hover:text-[#BF0505] py-1"
                 }`}
               >
                 {link.name}
-                <span 
-                  className={`absolute bottom-0 left-0 h-[2px] bg-[#BF0505] transition-all duration-300 ease-out ${
-                    isActive ? "w-full right-0" : "w-0 group-hover:w-full"
-                  }`} 
-                />
+                {!isContact && (
+                  <span 
+                    className={`absolute bottom-0 left-0 h-[2px] bg-[#BF0505] transition-all duration-300 ease-out ${
+                      isActive ? "w-full right-0" : "w-0 group-hover:w-full"
+                    }`} 
+                  />
+                )}
               </Link>
             );
           })}

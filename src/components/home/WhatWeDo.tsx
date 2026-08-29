@@ -81,7 +81,7 @@ export default function WhatWeDo() {
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] hover:border-[#BF0505] text-xs font-mono uppercase tracking-wider transition-all duration-200 group rounded-full"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#F7F7F7] hover:bg-[#EDEDED] text-[#050505] border border-[#DDDEDF] hover-gradient-border border-transparent text-xs font-mono uppercase tracking-wider transition-all duration-200 group rounded-full"
             >
               <span>VIEW ALL SERVICES</span>
               <ArrowRight className="w-4 h-4 text-[#BF0505] transition-transform group-hover:translate-x-1" />
@@ -98,7 +98,7 @@ export default function WhatWeDo() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between group hover:border-[#BF0505]/60 hover:bg-[#FEFEFE] transition-all duration-300 relative rounded-2xl"
+                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-4 sm:p-6 flex flex-col justify-between group hover-gradient-border border-transparent hover:bg-[#FEFEFE] transition-all duration-300 relative rounded-2xl"
                 >
                   <div>
                     {/* Top Row: Number & Icon */}
