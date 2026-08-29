@@ -86,6 +86,21 @@ export default function Hero() {
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row lg:items-start justify-between gap-12 lg:gap-8 h-full">
+        {/* Absolute Right Border Marquee Pill (Desktop) / Normal Flow Top (Mobile) */}
+        <div ref={pillRef} className="relative lg:absolute opacity-0 mb-4 lg:mb-0 lg:-top-16 lg:right-8 z-30 flex flex-col items-start lg:items-end text-left lg:text-right order-first lg:order-none w-full lg:w-auto">
+          <div className="relative rounded-3xl lg:rounded-full shadow-sm group inline-block overflow-hidden w-full sm:w-80 border border-[#DDDEDF]/80 max-w-full">
+            <div className="absolute inset-0 bg-[#F7F7F7]/80 backdrop-blur-sm z-0"></div>
+            <div className="relative z-10 flex w-max animate-marquee py-2.5">
+              <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
+                🍁 Proudly Canadian • Family Owned & Operated 🍁    Since 2010
+              </p>
+              <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
+                🍁 Proudly Canadian • Family Owned & Operated 🍁    Since 2010
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-2xl mt-auto lg:mt-0">
           {/* Top Info Block (Badge) */}
           <div ref={badgeRef} className="opacity-0 mb-4 flex flex-col items-start">
@@ -142,21 +157,6 @@ export default function Hero() {
             >
               EXPLORE SERVICES
             </Link>
-          </div>
-        </div>
-
-        {/* Absolute Right Border Marquee Pill */}
-        <div ref={pillRef} className="absolute opacity-0 top-0 lg:-top-16 right-4 sm:right-6 lg:right-8 z-30 flex flex-col items-end text-right">
-          <div className="relative rounded-3xl lg:rounded-full shadow-sm group inline-block overflow-hidden w-64 sm:w-80 border border-[#DDDEDF]/80">
-            <div className="absolute inset-0 bg-[#F7F7F7]/80 backdrop-blur-sm z-0"></div>
-            <div className="relative z-10 flex w-max animate-marquee py-2.5">
-              <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
-                🍁 Proudly Canadian • Family Owned & Operated 🍁    Since 2010
-              </p>
-              <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
-                🍁 Proudly Canadian • Family Owned & Operated 🍁    Since 2010
-              </p>
-            </div>
           </div>
         </div>
       </div>
