@@ -151,10 +151,10 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[#F7F7F7]/80 backdrop-blur-sm z-0"></div>
             <div className="relative z-10 flex w-max animate-marquee py-2.5">
               <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
-                🍁 Proudly Canadian • Family Owned & Operated 🍁 Since 2010 
+                🍁 Proudly Canadian • Family Owned & Operated 🍁    Since 2010
               </p>
               <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
-                🍁 Proudly Canadian • Family Owned & Operated 🍁 Since 2010 
+                🍁 Proudly Canadian • Family Owned & Operated 🍁    Since 2010
               </p>
             </div>
           </div>
