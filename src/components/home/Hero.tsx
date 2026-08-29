@@ -87,8 +87,8 @@ export default function Hero() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row lg:items-start justify-between gap-12 lg:gap-8 h-full">
         {/* Absolute Right Border Marquee Pill (Desktop) / Normal Flow Top (Mobile) */}
-        <div ref={pillRef} className="relative lg:absolute opacity-0 mb-4 lg:mb-0 lg:-top-16 lg:right-8 z-30 flex flex-col items-start lg:items-end text-left lg:text-right order-first lg:order-none w-full lg:w-auto">
-          <div className="relative rounded-3xl lg:rounded-full shadow-sm group inline-block overflow-hidden w-full sm:w-80 border border-[#DDDEDF]/80 max-w-full">
+        <div ref={pillRef} className="relative lg:absolute opacity-0 mb-6 lg:mb-0 lg:-top-16 lg:right-8 z-30 flex flex-col items-end text-right order-first lg:order-none w-full lg:w-auto">
+          <div className="relative rounded-3xl lg:rounded-full shadow-sm group inline-block overflow-hidden w-64 sm:w-80 border border-[#DDDEDF]/80 max-w-full">
             <div className="absolute inset-0 bg-[#F7F7F7]/80 backdrop-blur-sm z-0"></div>
             <div className="relative z-10 flex w-max animate-marquee py-2.5">
               <p className="text-xs lg:text-sm font-mono tracking-widest text-[#050505] font-bold px-4">
