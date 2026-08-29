@@ -146,7 +146,7 @@ export default function Hero() {
         </div>
 
         {/* Absolute Right Border Marquee Pill */}
-        <div ref={pillRef} className="absolute opacity-0 -top-28 lg:-top-16 right-4 sm:right-6 lg:right-8 z-30 flex flex-col items-end text-right">
+        <div ref={pillRef} className="absolute opacity-0 top-0 lg:-top-16 right-4 sm:right-6 lg:right-8 z-30 flex flex-col items-end text-right">
           <div className="relative rounded-3xl lg:rounded-full shadow-sm group inline-block overflow-hidden w-64 sm:w-80 border border-[#DDDEDF]/80">
             <div className="absolute inset-0 bg-[#F7F7F7]/80 backdrop-blur-sm z-0"></div>
             <div className="relative z-10 flex w-max animate-marquee py-2.5">
