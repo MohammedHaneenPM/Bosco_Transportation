@@ -103,6 +103,7 @@ export default function QuoteForm({
           replyto: formData.email,
           ...filteredFormData,
           serviceType: serviceLabel, // Overwrite the short code with the full label
+          submittedAt: new Date().toLocaleString(), // Add timestamp invisible to the user
         }),
       });
 
