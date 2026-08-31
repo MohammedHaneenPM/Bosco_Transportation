@@ -81,12 +81,29 @@ export default function QuoteForm({
     setLoading(true);
 
     try {
-      const response = await fetch('/api/quote', {
+      // Filter out false booleans and empty strings from formData
+      const filteredFormData = Object.fromEntries(
+        Object.entries(formData).filter(([_, value]) => value !== false && value !== "")
+      );
+
+      // Map serviceType ID to its full label for the email
+      const selectedService = SERVICE_OPTIONS.find(opt => opt.id === formData.serviceType);
+      const serviceLabel = selectedService ? selectedService.label : formData.serviceType;
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: `New Quote Request: ${formData.company || formData.name} - ${formData.origin} to ${formData.destination}`,
+          from_name: formData.name || "Bosco Website",
+          replyto: formData.email,
+          ...filteredFormData,
+          serviceType: serviceLabel, // Overwrite the short code with the full label
+        }),
       });
 
       const data = await response.json();
