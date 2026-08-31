@@ -76,17 +76,35 @@ export default function QuoteForm({
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate submission
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      if (onSuccess) {
-        setTimeout(onSuccess, 3000);
+
+    try {
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+        if (onSuccess) {
+          setTimeout(onSuccess, 3000);
+        }
+      } else {
+        alert(data.message || 'An error occurred while submitting your quote request.');
       }
-    }, 800);
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('An error occurred. Please try again or contact us directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -277,7 +295,7 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={handleBack}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors rounded-full"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back
             </button>
@@ -440,7 +458,7 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={handleBack}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors rounded-full"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back
             </button>
@@ -551,7 +569,7 @@ export default function QuoteForm({
             <button
               type="button"
               onClick={handleBack}
-              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#DDDEDF] bg-[#F7F7F7] text-[#050505] text-xs font-mono uppercase tracking-wider hover:bg-[#EDEDED] transition-colors rounded-full"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back
             </button>

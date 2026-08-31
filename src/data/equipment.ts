@@ -106,4 +106,18 @@ export const FLEET_EQUIPMENT: EquipmentItem[] = [
     ],
     image: "/images/Pickup Trucks.webp",
   },
+  {
+    id: "shunt-truck",
+    name: "Shunt Truck",
+    altText: "Shunt truck for yard and terminal operations",
+    category: "Yard Operations",
+    application: "Efficient trailer spotting, staging, and movement within yards and logistics facilities.",
+    features: [
+      "Rapid trailer spotting and repositioning",
+      "Efficient yard and dock operations",
+      "Frequent short-distance trailer movements",
+      "Support for loading and unloading operations",
+    ],
+    image: "/images/Shunt Truck.webp",
+  },
 ];

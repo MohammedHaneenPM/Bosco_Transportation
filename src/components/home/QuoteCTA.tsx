@@ -74,7 +74,7 @@ export default function QuoteCTA() {
             <div className="p-6 bg-[#F7F7F7] border border-[#DDDEDF] space-y-3 font-mono text-xs text-[#373737] rounded-2xl">
               <div className="flex items-center gap-3 text-[#050505]">
                 <Mail className="w-4 h-4 text-[#BF0505]" />
-                <span>dispatch@boscotransport.ca</span>
+                <a href="mailto:dispatch@boscotransport.ca" className="hover:text-[#BF0505] transition-colors">dispatch@boscotransport.ca</a>
               </div>
               <div className="text-[11px] text-[#6A6A6A] pt-2 border-t border-[#DDDEDF]">
                 Ontario & Greater Toronto Area (GTA) Carrier Support

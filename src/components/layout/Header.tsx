@@ -95,18 +95,26 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-[#050505] hover:text-[#BF0505] transition-colors"
-          aria-label="Toggle Navigation Menu"
-        >
-          {mobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
-        </button>
+        {/* Mobile Controls */}
+        <div className="flex md:hidden items-center gap-2 sm:gap-4">
+          <Link
+            href="/#contact"
+            className="inline-flex items-center justify-center px-4 py-1.5 bg-[#BF0505] hover:bg-[#A00404] text-white text-[10px] sm:text-xs font-mono uppercase tracking-widest rounded-full font-bold shadow-sm transition-colors"
+          >
+            Contact
+          </Link>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-1.5 text-[#050505] hover:text-[#BF0505] transition-colors"
+            aria-label="Toggle Navigation Menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}
