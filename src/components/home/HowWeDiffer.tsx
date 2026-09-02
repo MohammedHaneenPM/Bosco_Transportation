@@ -101,7 +101,7 @@ export default function HowWeDiffer() {
                   ref={(el) => {
                     cardsRef.current[index] = el;
                   }}
-                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-5 sm:p-8 rounded-2xl hover:shadow-lg transition-all duration-300 group flex flex-col"
+                  className="bg-[#F7F7F7] border border-[#DDDEDF] p-5 sm:p-8 rounded-2xl hover:shadow-lg transition-all duration-300 group flex flex-col hover-gradient-border hover:border-transparent hover:bg-[#FEFEFE]"
                 >
                   <div className="w-10 h-10 sm:w-14 sm:h-14 bg-white border border-[#DDDEDF] rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-[#BF0505] transition-colors duration-300 shrink-0">
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#BF0505] group-hover:text-white transition-colors duration-300" />
