@@ -161,6 +161,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="/#contact"
+                    className="hover:text-[#050505] transition-colors flex items-center gap-1.5"
+                  >
+                    <span className="text-[#BF0505]">›</span> Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/#quote"
                     className="hover:text-[#050505] transition-colors flex items-center gap-1.5"
                   >
@@ -195,6 +203,14 @@ export default function Footer() {
                 <li className="flex items-center gap-2">
                   <Truck className="w-3.5 h-3.5 text-[#BF0505]" />
                   <span>Dedicated Transportation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Truck className="w-3.5 h-3.5 text-[#BF0505]" />
+                  <span>Power-Only Transportation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Truck className="w-3.5 h-3.5 text-[#BF0505]" />
+                  <span>Specialized Freight</span>
                 </li>
               </ul>
             </div>
